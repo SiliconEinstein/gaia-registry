@@ -1,13 +1,11 @@
 [registry]
 name = "Gaia Official Registry"
-url = "https://siliconeinstein.github.io/gaia-registry/simple/"
+repo = "https://github.com/SiliconEinstein/gaia-registry"
+kind = "source-registry"
+default_source_kind = "github"
 
 [policy]
 new_package_wait_hours = 72
 version_update_wait_hours = 1
 require_review = false
 min_review_count = 0
-
-[index]
-github_pages_branch = "gh-pages"
-releases_repo = "SiliconEinstein/gaia-registry"

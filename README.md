@@ -4,36 +4,37 @@ Knowledge package index for the Gaia ecosystem. Follows the [Julia General Regis
 
 ## For consumers
 
-Add this registry to your `pyproject.toml`:
+Phase 1 is a **source registry**, not an installable wheel index.
+Use this repository to discover:
+- the canonical GitHub repo for a Gaia package
+- the validated git tag and pinned git SHA for a version
+- the package's `ir_hash`
+- Gaia package dependencies
 
-```toml
-[[tool.uv.index]]
-name = "gaia"
-url = "https://siliconeinstein.github.io/gaia-registry/simple/"
-```
-
-Then install packages:
+Consumers currently depend on registered packages via direct Git references, for example:
 
 ```bash
-uv add galileo-falling-bodies-gaia
+uv add "galileo-falling-bodies-gaia @ git+https://github.com/kunyuan/GalileoFallingBodies.gaia@<validated-git-sha>"
 ```
 
 ## For package authors
 
 1. Create a Gaia knowledge package (see [Gaia Lang v5](https://github.com/SiliconEinstein/Gaia))
-2. Tag a release: `git tag v1.0.0 && git push origin v1.0.0`
-3. Create a PR to this repo adding your package metadata to `packages/`
+2. Run `gaia compile` and `gaia check`
+3. Push source to GitHub and push a release tag: `git tag v1.0.0 && git push origin v1.0.0`
+4. Create a PR to this repo adding package metadata under `packages/`
 
 ## Structure
 
 ```
 packages/<name>/
   Package.toml       # UUID, name, repo URL
-  Versions.toml      # Version → ir_hash → git_sha → wheel
+  Versions.toml      # Version → ir_hash → git_tag → git_sha
   Deps.toml          # Dependencies per version
 ```
 
 ## Phase 1
 
-- Registration + CI validation + distribution
+- Registration + CI validation for GitHub-backed source releases
+- No wheel publishing and no PEP 503 package index yet
 - Review system deferred to Phase 2
