@@ -1,18 +1,26 @@
 name: Validate Registration
 on:
   pull_request:
-    paths: ['packages/**']
+    paths:
+      - "packages/**"
+
+env:
+  GAIA_REPO: https://github.com/SiliconEinstein/Gaia.git
+  GAIA_REF: fix/pr299-lang-ir-alignment
 
 jobs:
-  # ── Job 1: Untrusted sandbox (NO write permissions) ──
   sandbox-validate:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    outputs:
+      package_name: ${{ steps.parse.outputs.package_name }}
+      package_uuid: ${{ steps.parse.outputs.package_uuid }}
+      git_sha: ${{ steps.validate.outputs.git_sha }}
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0    # Full history needed for git diff
+          fetch-depth: 0
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -20,106 +28,92 @@ jobs:
       - name: Install Python
         run: uv python install 3.12
 
-      - name: Parse registration PR
+      - name: Parse registration payload
         id: parse
         run: |
-          # Find package directories with Package.toml
-          PKG_DIR=$(find packages -name "Package.toml" -exec dirname {} \; | head -1)
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.sha }}"
+          PKG_DIR=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- packages/ | awk -F/ '/^packages\/[^/]+\// {print $1 "/" $2; exit}')
+          if [ -z "$PKG_DIR" ]; then
+            echo "No changed package metadata found under packages/" >&2
+            exit 1
+          fi
           echo "pkg_dir=$PKG_DIR" >> "$GITHUB_OUTPUT"
-
-          # Read metadata
-          REPO_URL=$(python3 -c "
+          export PKG_DIR
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import os
           import tomllib
-          t = tomllib.loads(open('${PKG_DIR}/Package.toml').read())
-          print(t['repo'])
-          ")
-          echo "repo_url=$REPO_URL" >> "$GITHUB_OUTPUT"
 
-          VERSION=$(python3 -c "
-          import tomllib
-          t = tomllib.loads(open('${PKG_DIR}/Versions.toml').read())
-          versions = list(t.get('versions', {}).keys())
-          print(versions[-1] if versions else '')
-          ")
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          pkg_dir = os.environ["PKG_DIR"]
+          with open(f"{pkg_dir}/Package.toml", "rb") as f:
+              package = tomllib.load(f)
+          with open(f"{pkg_dir}/Versions.toml", "rb") as f:
+              versions = tomllib.load(f)["versions"]
+          version = next(reversed(versions))
+          payload = versions[version]
 
-          GIT_TAG=$(python3 -c "
-          import tomllib
-          t = tomllib.loads(open('${PKG_DIR}/Versions.toml').read())
-          v = list(t.get('versions', {}).values())[-1]
-          print(v.get('git_tag', ''))
-          ")
-          echo "git_tag=$GIT_TAG" >> "$GITHUB_OUTPUT"
+          print(f"package_name={package['name']}")
+          print(f"package_uuid={package['uuid']}")
+          print(f"repo_url={package['repo']}")
+          print(f"version={version}")
+          print(f"git_tag={payload['git_tag']}")
+          print(f"git_sha={payload.get('git_sha', '')}")
+          print(f"ir_hash={payload['ir_hash']}")
+          PY
 
-          GIT_SHA=$(python3 -c "
-          import tomllib
-          t = tomllib.loads(open('${PKG_DIR}/Versions.toml').read())
-          v = list(t.get('versions', {}).values())[-1]
-          print(v.get('git_sha', ''))
-          ")
-          echo "git_sha=$GIT_SHA" >> "$GITHUB_OUTPUT"
-
-          IR_HASH=$(python3 -c "
-          import tomllib
-          t = tomllib.loads(open('${PKG_DIR}/Versions.toml').read())
-          v = list(t.get('versions', {}).values())[-1]
-          print(v.get('ir_hash', ''))
-          ")
-          echo "ir_hash=$IR_HASH" >> "$GITHUB_OUTPUT"
-
-      - name: Clone and pin to commit SHA
-        id: pin
+      - name: Clone Gaia CLI source
         run: |
-          git clone ${{ steps.parse.outputs.repo_url }} pkg
+          git clone --depth 1 --branch "$GAIA_REF" "$GAIA_REPO" /tmp/gaia
+
+      - name: Clone and validate source release
+        id: validate
+        run: |
+          git clone "${{ steps.parse.outputs.repo_url }}" pkg
           cd pkg
-          if [ -n "${{ steps.parse.outputs.git_sha }}" ]; then
-            git checkout ${{ steps.parse.outputs.git_sha }}
+          if [ -n "${{ steps.parse.outputs.git_sha }}" ] && [ "${{ steps.parse.outputs.git_sha }}" != "None" ]; then
+            git checkout "${{ steps.parse.outputs.git_sha }}"
           else
-            git checkout ${{ steps.parse.outputs.git_tag }}
+            git checkout "${{ steps.parse.outputs.git_tag }}"
           fi
-          echo "git_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          ACTUAL_SHA=$(git rev-parse HEAD)
+          echo "git_sha=$ACTUAL_SHA" >> "$GITHUB_OUTPUT"
 
-      - name: Install gaia-lang
-        run: |
-          cd pkg
-          uv sync 2>/dev/null || uv pip install gaia-lang 2>/dev/null || echo "No gaia-lang dep yet, using local"
-
-      - name: Reproducible build (executes author code — sandboxed, read-only)
-        run: |
-          cd pkg
-          # For now, verify the package can be imported and ir.json exists
-          if [ -f ".gaia/ir_hash" ] && [ -n "${{ steps.parse.outputs.ir_hash }}" ]; then
-            ACTUAL=$(cat .gaia/ir_hash)
-            EXPECTED="${{ steps.parse.outputs.ir_hash }}"
-            if [ "$ACTUAL" != "$EXPECTED" ]; then
-              echo "ERROR: ir_hash mismatch! Expected $EXPECTED, got $ACTUAL"
-              exit 1
-            fi
-            echo "ir_hash verified: $ACTUAL"
-          else
-            echo "Skipping ir_hash verification (not provided or no .gaia/ir_hash)"
+          if [ -n "${{ steps.parse.outputs.git_sha }}" ] && [ "${{ steps.parse.outputs.git_sha }}" != "None" ] && [ "$ACTUAL_SHA" != "${{ steps.parse.outputs.git_sha }}" ]; then
+            echo "Pinned SHA mismatch: expected ${{ steps.parse.outputs.git_sha }}, got $ACTUAL_SHA" >&2
+            exit 1
           fi
 
-      - name: Schema validation
-        run: |
-          if [ -f "pkg/.gaia/ir.json" ]; then
-            python3 -c "
-          import json
-          ir = json.load(open('pkg/.gaia/ir.json'))
-          assert 'package' in ir, 'Missing package field'
-          assert 'knowledge' in ir, 'Missing knowledge field'
-          assert 'strategies' in ir, 'Missing strategies field'
-          assert 'operators' in ir, 'Missing operators field'
-          print(f'Schema OK: {len(ir[\"knowledge\"])} knowledge, {len(ir[\"strategies\"])} strategies')
-          "
-          else
-            echo "No ir.json found, skipping schema validation"
+          uv sync
+
+          GAIA_APP='import sys; sys.path.insert(0, "/tmp/gaia"); from gaia.cli.main import app; app()'
+          uv run python -c "$GAIA_APP" compile .
+          ACTUAL_HASH=$(cat .gaia/ir_hash)
+          if [ "$ACTUAL_HASH" != "${{ steps.parse.outputs.ir_hash }}" ]; then
+            echo "IR hash mismatch: expected ${{ steps.parse.outputs.ir_hash }}, got $ACTUAL_HASH" >&2
+            exit 1
           fi
 
-    outputs:
-      git_sha: ${{ steps.pin.outputs.git_sha }}
+          uv run python -c "$GAIA_APP" check .
 
-  # ── Job 2: Trusted gate (label/merge permissions, NO code execution) ──
+          python3 - <<'PY'
+          import pathlib
+          import tomllib
+
+          pkg_dependencies = tomllib.loads(pathlib.Path("pyproject.toml").read_text()).get("project", {}).get("dependencies", [])
+          gaia_deps = []
+          for dep in pkg_dependencies:
+              requirement = dep.split(";", 1)[0].strip()
+              name = requirement.split(" ", 1)[0].split("[", 1)[0]
+              name = name.split("<", 1)[0].split(">", 1)[0].split("=", 1)[0].split("!", 1)[0].split("~", 1)[0]
+              if name.endswith("-gaia"):
+                  gaia_deps.append(name.removesuffix("-gaia"))
+
+          missing = [name for name in gaia_deps if not pathlib.Path("../packages", name).exists()]
+          if missing:
+              raise SystemExit(f"Unregistered Gaia dependencies: {', '.join(sorted(missing))}")
+          print("Registered Gaia dependencies:", ", ".join(sorted(gaia_deps)) if gaia_deps else "(none)")
+          PY
+
   trusted-gate:
     needs: sandbox-validate
     runs-on: ubuntu-latest
@@ -128,7 +122,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validation passed
+      - name: Verify UUID uniqueness
         run: |
-          echo "Sandbox validation passed"
+          PACKAGE_NAME="${{ needs.sandbox-validate.outputs.package_name }}"
+          PACKAGE_UUID="${{ needs.sandbox-validate.outputs.package_uuid }}"
+          python3 - <<'PY'
+          import os
+          import pathlib
+          import tomllib
+
+          package_name = os.environ["PACKAGE_NAME"]
+          package_uuid = os.environ["PACKAGE_UUID"]
+
+          for package_toml in pathlib.Path("packages").glob("*/Package.toml"):
+              payload = tomllib.loads(package_toml.read_text())
+              if payload["name"] == package_name:
+                  continue
+              if payload["uuid"] == package_uuid:
+                  raise SystemExit(f"UUID collision: {package_uuid} already used by {payload['name']}")
+          print(f"UUID OK: {package_uuid}")
+          PY
+        env:
+          PACKAGE_NAME: ${{ needs.sandbox-validate.outputs.package_name }}
+          PACKAGE_UUID: ${{ needs.sandbox-validate.outputs.package_uuid }}
+
+      - name: Validation summary
+        run: |
           echo "Pinned commit SHA: ${{ needs.sandbox-validate.outputs.git_sha }}"

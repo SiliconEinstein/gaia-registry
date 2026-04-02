@@ -1,2 +1,5 @@
-# No gaia package dependencies for this package
 [deps."4.0.0"]
+
+[deps."4.0.1"]
+
+[deps."4.0.2"]

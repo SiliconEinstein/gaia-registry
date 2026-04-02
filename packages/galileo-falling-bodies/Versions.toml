@@ -1,13 +1,17 @@
 [versions."4.0.0"]
-ir_hash = "f6372acff423af8aa7b197507d7c98457dbfa7e4506f2b384f6cef928facdd9d"
+ir_hash = "sha256:f6372acff423af8aa7b197507d7c98457dbfa7e4506f2b384f6cef928facdd9d"
 git_tag = "v4.0.0"
 git_sha = "ed35551818ecbdb218820236aec6dc1bebb6d725"
 registered_at = "2026-04-02T12:00:00Z"
-wheel = "galileo_falling_bodies_gaia-4.0.0-py3-none-any.whl"
 
 [versions."4.0.1"]
-ir_hash = "0de984b052f21009973d45b2877447448dccd5d6d2531876f8746697bb553847"
+ir_hash = "sha256:0de984b052f21009973d45b2877447448dccd5d6d2531876f8746697bb553847"
 git_tag = "v4.0.1"
 git_sha = "b8c88fdf7b06a17559941a2741472b5b50af3e20"
 registered_at = "2026-04-02T12:30:00Z"
-wheel = "galileo_falling_bodies_gaia-4.0.1-py3-none-any.whl"
+
+[versions."4.0.2"]
+ir_hash = "sha256:fcdca79e982371ba73ae844c251ac7e46b413518bd86210625ebafc239c2b602"
+git_tag = "v4.0.2"
+git_sha = "f8a0c5068d6e4bc44e2e0165b91a3b84dad94c79"
+registered_at = "2026-04-02T15:00:00Z"
