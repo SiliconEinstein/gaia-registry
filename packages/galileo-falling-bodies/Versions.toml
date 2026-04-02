@@ -4,3 +4,10 @@ git_tag = "v4.0.0"
 git_sha = "ed35551818ecbdb218820236aec6dc1bebb6d725"
 registered_at = "2026-04-02T12:00:00Z"
 wheel = "galileo_falling_bodies_gaia-4.0.0-py3-none-any.whl"
+
+[versions."4.0.1"]
+ir_hash = "0de984b052f21009973d45b2877447448dccd5d6d2531876f8746697bb553847"
+git_tag = "v4.0.1"
+git_sha = "b8c88fdf7b06a17559941a2741472b5b50af3e20"
+registered_at = "2026-04-02T12:30:00Z"
+wheel = "galileo_falling_bodies_gaia-4.0.1-py3-none-any.whl"
