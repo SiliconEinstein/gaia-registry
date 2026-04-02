@@ -11,6 +11,8 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # Full history needed for git diff
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -21,9 +23,8 @@ jobs:
       - name: Parse registration PR
         id: parse
         run: |
-          # Find the changed package directory
-          CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }}..HEAD -- packages/ | head -1)
-          PKG_DIR=$(echo "$CHANGED" | cut -d'/' -f1-2)
+          # Find package directories with Package.toml
+          PKG_DIR=$(find packages -name "Package.toml" -exec dirname {} \; | head -1)
           echo "pkg_dir=$PKG_DIR" >> "$GITHUB_OUTPUT"
 
           # Read metadata
