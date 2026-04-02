@@ -1,0 +1,112 @@
+name: Build and Publish
+on:
+  push:
+    branches: [main]
+    paths: ['packages/**']
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  # ── Job 1: Untrusted builder (read-only, builds wheel) ──
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install Python
+        run: uv python install 3.12
+
+      - name: Detect changed packages
+        id: changed
+        run: python3 scripts/detect_changed_versions.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Clone by pinned SHA, build wheels
+        run: |
+          mkdir -p /tmp/wheels
+          echo '${{ steps.changed.outputs.packages }}' | python3 -c "
+          import json, subprocess, sys, hashlib
+          packages = json.loads(sys.stdin.read())
+          manifest = []
+          for pkg in packages:
+              repo = pkg['repo']
+              sha = pkg.get('git_sha') or pkg.get('git_tag', '')
+              name = pkg['pypi_name']
+              version = pkg['version']
+
+              subprocess.run(['git', 'clone', repo, 'build_pkg'], check=True)
+              subprocess.run(['git', 'checkout', sha], cwd='build_pkg', check=True)
+              subprocess.run(['uv', 'build', '--wheel'], cwd='build_pkg', check=True)
+
+              import glob
+              wheels = glob.glob('build_pkg/dist/*.whl')
+              if wheels:
+                  wheel_file = wheels[0]
+                  with open(wheel_file, 'rb') as f:
+                      wheel_hash = hashlib.sha256(f.read()).hexdigest()
+                  import shutil
+                  shutil.copy(wheel_file, '/tmp/wheels/')
+                  import os
+                  manifest.append(f'{name}|{version}|{wheel_hash}|{os.path.basename(wheel_file)}')
+
+              subprocess.run(['rm', '-rf', 'build_pkg'])
+
+          with open('/tmp/wheels/manifest.txt', 'w') as f:
+              f.write('\n'.join(manifest))
+          print(f'Built {len(manifest)} wheels')
+          "
+
+      - name: Upload wheel artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wheels
+          path: /tmp/wheels/
+
+  # ── Job 2: Trusted publisher (write access, NO code execution) ──
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download wheel artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: wheels
+          path: /tmp/wheels/
+
+      - name: Upload to GitHub Releases
+        run: |
+          if [ ! -f /tmp/wheels/manifest.txt ]; then
+            echo "No wheels to publish"
+            exit 0
+          fi
+          while IFS='|' read -r PKG_NAME VERSION WHEEL_HASH WHEEL_FILE; do
+            echo "Publishing $PKG_NAME $VERSION (hash: ${WHEEL_HASH:0:16}...)"
+            gh release create "release/${PKG_NAME}-${VERSION}" \
+              "/tmp/wheels/${WHEEL_FILE}" \
+              --title "${PKG_NAME} ${VERSION}" \
+              --notes "Auto-published by registry CI" \
+              2>/dev/null || echo "Release already exists, skipping"
+          done < /tmp/wheels/manifest.txt
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Regenerate PEP 503 index
+        run: python3 scripts/generate_pep503_index.py --output-dir /tmp/simple
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: /tmp/simple
