@@ -64,6 +64,8 @@ jobs:
       - name: Clone Gaia CLI source
         run: |
           git clone --depth 1 --branch "$GAIA_REF" "$GAIA_REPO" /tmp/gaia
+          cd /tmp/gaia
+          uv sync
 
       - name: Clone and validate source release
         id: validate
@@ -86,14 +88,14 @@ jobs:
           uv sync
 
           GAIA_APP='import sys; sys.path.insert(0, "/tmp/gaia"); from gaia.cli.main import app; app()'
-          uv run python -c "$GAIA_APP" compile .
+          /tmp/gaia/.venv/bin/python -c "$GAIA_APP" compile .
           ACTUAL_HASH=$(cat .gaia/ir_hash)
           if [ "$ACTUAL_HASH" != "${{ steps.parse.outputs.ir_hash }}" ]; then
             echo "IR hash mismatch: expected ${{ steps.parse.outputs.ir_hash }}, got $ACTUAL_HASH" >&2
             exit 1
           fi
 
-          uv run python -c "$GAIA_APP" check .
+          /tmp/gaia/.venv/bin/python -c "$GAIA_APP" check .
 
           python3 - <<'PY'
           import pathlib
