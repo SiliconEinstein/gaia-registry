@@ -6,7 +6,7 @@ on:
 
 env:
   GAIA_REPO: https://github.com/SiliconEinstein/Gaia.git
-  GAIA_REF: fix/pr299-lang-ir-alignment
+  GAIA_REF: e9fcb1ae4f70bf55666e07eda431e92e9d0d8d5d
 
 jobs:
   sandbox-validate:
@@ -63,8 +63,9 @@ jobs:
 
       - name: Clone Gaia CLI source
         run: |
-          git clone --depth 1 --branch "$GAIA_REF" "$GAIA_REPO" /tmp/gaia
+          git clone "$GAIA_REPO" /tmp/gaia
           cd /tmp/gaia
+          git checkout "$GAIA_REF"
           uv sync
 
       - name: Clone and validate source release
