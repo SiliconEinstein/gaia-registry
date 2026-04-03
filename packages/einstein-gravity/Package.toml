@@ -1,0 +1,6 @@
+uuid = "e3f4a5b6-c7d8-9012-cdef-345678901234"
+name = "einstein-gravity"
+pypi_name = "einstein-gravity-gaia"
+repo = "https://github.com/atom525/einstein-gravity.gaia"
+description = "Einstein GR light deflection and contradiction with Soldner — Gaia Lang v5"
+created_at = "2026-04-03T03:59:17Z"
