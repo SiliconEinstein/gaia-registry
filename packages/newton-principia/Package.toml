@@ -1,0 +1,6 @@
+uuid = "d2e3f4a5-b6c7-8901-bcde-f23456789012"
+name = "newton-principia"
+pypi_name = "newton-principia-gaia"
+repo = "https://github.com/atom525/newton-principia.gaia"
+description = "Newton's derivation of freefall acceleration"
+created_at = "2026-04-03T04:00:00Z"
