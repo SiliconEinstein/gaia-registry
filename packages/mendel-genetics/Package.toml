@@ -1,0 +1,6 @@
+uuid = "b13694ea-7460-41df-94c6-4cb1677ff92b"
+name = "mendel-genetics"
+pypi_name = "mendel-genetics-gaia"
+repo = "https://github.com/atom525/mendel-genetics.gaia"
+description = "Mendel's laws of heredity"
+created_at = "2026-04-03T04:00:00Z"
