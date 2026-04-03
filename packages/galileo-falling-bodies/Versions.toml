@@ -21,3 +21,9 @@ ir_hash = "sha256:fcdca79e982371ba73ae844c251ac7e46b413518bd86210625ebafc239c2b6
 git_tag = "v4.0.3"
 git_sha = "5a7fc8798bc57e34847c2a81ee0859e80320b7f7"
 registered_at = "2026-04-02T16:04:25Z"
+
+[versions."4.0.4"]
+ir_hash = "sha256:a5f6b830318ae68ac824cd6466a69ff1b9bdb7996cf61fde80099d8800d003b2"
+git_tag = "v4.0.4"
+git_sha = "82b4af4ca2328891c27c632f493b9f8551f5f885"
+registered_at = "2026-04-03T02:11:51Z"
