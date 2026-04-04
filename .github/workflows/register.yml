@@ -4,10 +4,6 @@ on:
     paths:
       - "packages/**"
 
-env:
-  GAIA_REPO: https://github.com/SiliconEinstein/Gaia.git
-  GAIA_REF: e9fcb1ae4f70bf55666e07eda431e92e9d0d8d5d
-
 jobs:
   sandbox-validate:
     runs-on: ubuntu-latest
@@ -27,6 +23,9 @@ jobs:
 
       - name: Install Python
         run: uv python install 3.12
+
+      - name: Install Gaia CLI
+        run: uv pip install --system gaia-lang
 
       - name: Parse registration payload
         id: parse
@@ -61,13 +60,6 @@ jobs:
           print(f"ir_hash={payload['ir_hash']}")
           PY
 
-      - name: Clone Gaia CLI source
-        run: |
-          git clone "$GAIA_REPO" /tmp/gaia
-          cd /tmp/gaia
-          git checkout "$GAIA_REF"
-          uv sync
-
       - name: Clone and validate source release
         id: validate
         run: |
@@ -88,15 +80,14 @@ jobs:
 
           uv sync
 
-          GAIA_APP='import sys; sys.path.insert(0, "/tmp/gaia"); from gaia.cli.main import app; app()'
-          /tmp/gaia/.venv/bin/python -c "$GAIA_APP" compile .
+          gaia compile .
           ACTUAL_HASH=$(cat .gaia/ir_hash)
           if [ "$ACTUAL_HASH" != "${{ steps.parse.outputs.ir_hash }}" ]; then
             echo "IR hash mismatch: expected ${{ steps.parse.outputs.ir_hash }}, got $ACTUAL_HASH" >&2
             exit 1
           fi
 
-          /tmp/gaia/.venv/bin/python -c "$GAIA_APP" check .
+          gaia check .
 
           python3 - <<'PY'
           import pathlib
@@ -116,6 +107,19 @@ jobs:
               raise SystemExit(f"Unregistered Gaia dependencies: {', '.join(sorted(missing))}")
           print("Registered Gaia dependencies:", ", ".join(sorted(gaia_deps)) if gaia_deps else "(none)")
           PY
+
+      - name: Validate namespace
+        working-directory: pkg
+        run: |
+          python3 -c "
+          import json, sys
+          graph = json.load(open('.gaia/ir.json'))
+          ns = graph.get('namespace', '')
+          if ns != 'github':
+              print(f'Error: namespace must be \"github\", got \"{ns}\"', file=sys.stderr)
+              sys.exit(1)
+          print(f'Namespace OK: {ns}')
+          "
 
   trusted-gate:
     needs: sandbox-validate
