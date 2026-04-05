@@ -21,11 +21,13 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5
 
-      - name: Install Python
-        run: uv python install 3.12
-
-      - name: Install Gaia CLI
-        run: uv pip install --system gaia-lang
+      - name: Set up Python + venv with Gaia CLI
+        run: |
+          uv python install 3.12
+          uv venv .venv --python 3.12
+          source .venv/bin/activate
+          uv pip install gaia-lang
+          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
 
       - name: Parse registration payload
         id: parse
@@ -78,7 +80,7 @@ jobs:
             exit 1
           fi
 
-          uv sync
+          uv pip install -e .
 
           gaia compile .
           ACTUAL_HASH=$(cat .gaia/ir_hash)
