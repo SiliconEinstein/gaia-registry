@@ -1,0 +1,6 @@
+uuid = "67967e95-ae49-46a4-89f4-5ebe651d7483"
+name = "watson-rfdiffusion-2023"
+pypi_name = "watson-rfdiffusion-2023-gaia"
+repo = "https://github.com/kunyuan/watson-rfdiffusion-2023-gaia"
+description = "Gaia knowledge package: Watson et al. 2023 — De novo design of protein structure and function with RFdiffusion (Nature)"
+created_at = "2026-04-06T14:03:59Z"
