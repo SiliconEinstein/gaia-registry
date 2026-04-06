@@ -1,0 +1,5 @@
+[versions."0.1.0"]
+ir_hash = "sha256:ac3252109c2e000554c322b9934c31d0096fc926aa80222d425f722f9780f585"
+git_tag = "v0.1.0"
+git_sha = "2828a85624e3f98e9193dcbb121a98daf2c3037a"
+registered_at = "2026-04-06T13:07:12Z"
