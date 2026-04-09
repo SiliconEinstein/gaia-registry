@@ -10,6 +10,8 @@ Use this repository to discover:
 - the validated git tag and pinned git SHA for a version
 - the package's `ir_hash`
 - Gaia package dependencies
+- release-scoped `exports.json` / `premises.json` / `holes.json` / `bridges.json` manifests
+- derived static indexes under `index/`
 
 Consumers currently depend on registered packages via direct Git references, for example:
 
@@ -31,10 +33,22 @@ packages/<name>/
   Package.toml       # UUID, name, repo URL
   Versions.toml      # Version → ir_hash → git_tag → git_sha
   Deps.toml          # Dependencies per version
+  releases/<version>/
+    exports.json     # Author-declared exports for the release
+    premises.json    # Compiler-derived public premise interface snapshots
+    holes.json       # Convenience subset of local holes
+    bridges.json     # fills() declarations bound to target interface snapshots
+
+index/
+  premises/          # Derived premise indexes
+  holes/             # Derived hole indexes
+  bridges/           # Derived bridge indexes
+  manifests/         # Stats / build outputs
 ```
 
-## Phase 1
+## Registry behavior
 
-- Registration + CI validation for GitHub-backed source releases
+- Registration PRs remain source-backed and GitHub-native
+- CI recompiles the tagged source release and validates any submitted release manifests
+- Static indexes under `index/` are generated after merge by GitHub Actions
 - No wheel publishing and no PEP 503 package index yet
-- Review system deferred to Phase 2
