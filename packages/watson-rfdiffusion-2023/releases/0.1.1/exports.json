@@ -1,0 +1,57 @@
+{
+  "exports": [
+    {
+      "content": "The overall experimental success rate for RFdiffusion binders (binding at or above 50% of maximal BLI response for positive control at 10 μM) was 19% across five targets, an increase of roughly two orders of magnitude over the previous Rosetta-based method on the same targets. Binders were identified for all five targets with fewer than 100 designs tested per target.",
+      "content_hash": "8d09e866238a85fc63007756e7286d5dafe809099297941c995893255c13cd9f",
+      "label": "binder_success_rate",
+      "qid": "github:watson_rfdiffusion_2023::binder_success_rate",
+      "type": "claim"
+    },
+    {
+      "content": "RFdiffusion is a comprehensive improvement over current protein design methods: (1) it generates diverse unconditional designs up to 600 residues far exceeding previous methods; (2) it enables higher-order architectures with any desired symmetry, unlike Hallucination methods limited to cyclic symmetries; (3) it outperforms all previous methods on motif scaffolding benchmarks; (4) it raises binder design success rates by two orders of magnitude.",
+      "content_hash": "a09e4cc4815d733790de34e9c173bb7329b02dd9e0d091b7003a76a7755bd583",
+      "label": "comprehensive_improvement",
+      "qid": "github:watson_rfdiffusion_2023::comprehensive_improvement",
+      "type": "claim"
+    },
+    {
+      "content": "In a manner analogous to networks that produce images from user-specified inputs, RFdiffusion enables the design of diverse functional proteins from simple molecular specifications (e.g., high-affinity binders to a user-specified target protein, diverse protein assemblies from user-specified symmetries), with minimal specialist knowledge required.",
+      "content_hash": "f6c42c14870d21dc2995c0490baa3600ca0f793255eb09386cba885567e46eec",
+      "label": "generality_claim",
+      "qid": "github:watson_rfdiffusion_2023::generality_claim",
+      "type": "claim"
+    },
+    {
+      "content": "The near-perfect agreement between the cryo-EM structure and the RFdiffusion design model (0.63 Å r.m.s.d.) demonstrates that RFdiffusion can design functional proteins with atomic-level accuracy and precisely target functionally relevant sites on therapeutically important proteins.",
+      "content_hash": "bcc415252038d595bd996124446a5824cb86fbfe056c85ba59f1586f3d799d23",
+      "label": "ha20_atomic_accuracy",
+      "qid": "github:watson_rfdiffusion_2023::ha20_atomic_accuracy",
+      "type": "claim"
+    },
+    {
+      "content": "RFdiffusion solves 23 of the 25 benchmark motif-scaffolding problems, compared to 15 for Hallucination and 19 for RFjoint Inpainting. For 19 out of 23 solved problems, RFdiffusion's fraction of successful designs is higher than either Hallucination or RFjoint Inpainting. RFdiffusion required no hyperparameter tuning or external potentials, unlike Hallucination which required problem-specific optimization.",
+      "content_hash": "5b8c433d159f7e98b13df6d0897610cf0d1e6a8a3cf56e982b39e72ebd4dd461",
+      "label": "rfdiffusion_benchmark_performance",
+      "qid": "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+      "type": "claim"
+    },
+    {
+      "content": "RFdiffusion achieves outstanding performance on unconditional and topology-constrained protein monomer design, protein binder design, symmetric oligomer design, enzyme active site scaffolding, and symmetric motif scaffolding for therapeutic and metal-binding protein design.",
+      "content_hash": "6da98d1a6c60ad5518fa6cd6211d862d8f45fc2ecdc9ca0e014a7621bcccd78b",
+      "label": "rfdiffusion_broad_success",
+      "qid": "github:watson_rfdiffusion_2023::rfdiffusion_broad_success",
+      "type": "claim"
+    },
+    {
+      "content": "Despite not being trained on symmetric inputs, RFdiffusion generates symmetric oligomers with high in silico success rates, particularly when guided by an auxiliary inter- and intrachain contact potential. RFdiffusion designs are nearly indistinguishable from AF2 predictions of the structures adopted by the designed sequences, and many show little resemblance to previously solved protein structures.",
+      "content_hash": "9dc89969f5702a5b96d9932e25db9ae7f18e22a4e7bf32518b3a203fab1ce83f",
+      "label": "symmetric_high_success",
+      "qid": "github:watson_rfdiffusion_2023::symmetric_high_success",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:4c03ba068c8a4d3dbdbe20c56bd22540cc166d747595ce2bc6bb3b61160750bc",
+  "manifest_schema_version": 1,
+  "package": "watson-rfdiffusion-2023",
+  "version": "0.1.1"
+}
