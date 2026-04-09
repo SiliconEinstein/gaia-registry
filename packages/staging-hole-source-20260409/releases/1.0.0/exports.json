@@ -1,0 +1,15 @@
+{
+  "exports": [
+    {
+      "content": "A theorem that depends on a still-open premise.",
+      "content_hash": "9174832d24cbad83c0f0e4cec26b72c7babf632b48488fbeaef6490b2cc6af7e",
+      "label": "main_theorem",
+      "qid": "github:staging_hole_source_20260409::main_theorem",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:a1ff4cd3aa379a458392d79586f11f974d0c6aede910adaf1c5cff8ef66fbed5",
+  "manifest_schema_version": 1,
+  "package": "staging-hole-source-20260409",
+  "version": "1.0.0"
+}
