@@ -1,0 +1,15 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:93c67d52d52dc8710afd18965508712e052bbb628d5bf5536afba2f6e061c837",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::prior_ddpm_limitations"
+}

@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "f28c785bb8cdee51aff6ab293256d2da2fb2e0272fe656c021f909890d33f1aa",
+      "exported": false,
+      "interface_hash": "sha256:75b98c286c9f8a421d2ebedd47c95544106091f1f40dda1027a7b9dba3d7205d",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::ha20_atomic_accuracy"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::ha20_cryoem_structure"
+}

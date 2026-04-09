@@ -1,0 +1,15 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:49f9a2611f4b5dc6e9392029afdba3c9917815bb80adbae0a2be5560fd8b1432",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::ddpm_properties_for_protein_design"
+}

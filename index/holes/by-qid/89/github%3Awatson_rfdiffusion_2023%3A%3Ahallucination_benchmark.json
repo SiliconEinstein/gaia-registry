@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:8be54efd5f5ce2b852cacecc03e73b2446bd7ccf5847f711922d9a6cf04d86bc",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ],
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::hallucination_benchmark"
+}

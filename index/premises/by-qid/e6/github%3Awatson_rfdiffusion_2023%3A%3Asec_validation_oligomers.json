@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "1070e11fc7cbe6e3b2435bb5bdbacebdb110d79c7aec9fcf9ef5c6af88060d91",
+      "exported": false,
+      "interface_hash": "sha256:502812bcf86b69619d67c7669ef90dede87bc798b4c109898d810aba2cfba9bb",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::sec_validation_oligomers"
+}

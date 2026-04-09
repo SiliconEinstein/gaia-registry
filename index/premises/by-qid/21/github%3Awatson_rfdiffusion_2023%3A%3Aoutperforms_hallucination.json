@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "5c9b34cd4cc40704ef4464004e28129e9ef473b6d431429ba382463fb8c257ef",
+      "exported": false,
+      "interface_hash": "sha256:8d5d51413629db202e4773751929f3f54562cea43f3ebe0b24d6a83f22d064b0",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::comprehensive_improvement"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::outperforms_hallucination"
+}

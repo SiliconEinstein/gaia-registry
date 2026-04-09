@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "content_hash": "bb40f948d0fc0a5c1d0dee2b432a137431dabb16b920d44069457c72916e7c16",
+      "exported": false,
+      "interface_hash": "sha256:a9f6bada964a149c34697a7ed39d2382b573407f21edb21a87e3e04007921c88",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::denoising_process"
+}

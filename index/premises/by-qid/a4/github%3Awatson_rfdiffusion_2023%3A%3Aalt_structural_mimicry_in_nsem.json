@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "4909011f905bc1425481c57348c03476c0274cf5564cb9720015aad977c25ab5",
+      "exported": false,
+      "interface_hash": "sha256:f624b48909502751e1ac42b0894a20edfbcbbcb99b60196b8f498d215954f1fc",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::alt_structural_mimicry_in_nsem"
+}

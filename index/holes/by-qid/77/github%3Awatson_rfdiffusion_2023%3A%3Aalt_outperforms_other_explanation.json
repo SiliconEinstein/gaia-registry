@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:59712f0146e8a5dc6d423f220e9f6de7ff3b4d5b83c12caaebce53d6fb2c8a13",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::comprehensive_improvement"
+      ],
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::alt_outperforms_other_explanation"
+}

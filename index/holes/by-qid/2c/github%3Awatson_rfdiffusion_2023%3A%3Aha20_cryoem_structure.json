@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:75b98c286c9f8a421d2ebedd47c95544106091f1f40dda1027a7b9dba3d7205d",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::ha20_atomic_accuracy"
+      ],
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::ha20_cryoem_structure"
+}

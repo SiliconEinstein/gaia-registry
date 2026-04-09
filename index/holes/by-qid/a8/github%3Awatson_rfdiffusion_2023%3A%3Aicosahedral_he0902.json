@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:911cd0dfce4b8f10ac93eea77165c13df4f30ca1e12cf236b8e0efebbe5356da",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::icosahedral_he0902"
+}

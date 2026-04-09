@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "4c8f154ec5f6bf68330545099e64af1dc5e0e96cfdf185ecb6a9f62679b4f0e4",
+      "exported": false,
+      "interface_hash": "sha256:8acb3481f868d08b9c1c24a10dcb88f102ea1b8d72dd57fc562b057e162e16b3",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::novel_interfaces"
+}

@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "469f28ea375f78790ce2e25a3f34062fb52af4f9a268caad8c756c4992300a3a",
+      "exported": false,
+      "interface_hash": "sha256:344b96151e3b86e4c01f9402efd25496a6f7064fd8a8040e4274b05072c159d0",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::alt_nonspecific_adhesion"
+}

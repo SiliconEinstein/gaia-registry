@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:c2e905ea520a98502804ea57c7ff1f489ecfeda42da3437e992b47128592ce92",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ],
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::p53_mdm2_design"
+}

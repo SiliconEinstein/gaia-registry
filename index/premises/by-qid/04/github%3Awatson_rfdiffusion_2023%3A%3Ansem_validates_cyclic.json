@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "17421212643fde9453cedf91c7ae5d554d5c064d05654a9cec0e6561160d9480",
+      "exported": false,
+      "interface_hash": "sha256:efbb31c4c7393d29ffa91d247e0d5032d4cc6a510a1dc0d4f9636a4bc4306e06",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::nsem_validates_cyclic"
+}

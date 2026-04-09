@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "9ec22980c78179623567eadb3d4c8784bd64cdbc878a5ac7aa42899a381be805",
+      "exported": false,
+      "interface_hash": "sha256:293c6e589e7f85fdd8b1e0117d5f9a9a8e43856b33af7c4080559239fce8961a",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::alt_memorization"
+}

@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "a93d64d73abd90e6bec1ebd8f3becf10d7d29d8896c41ddfa5f5671cd0c1c952",
+      "exported": false,
+      "interface_hash": "sha256:911cd0dfce4b8f10ac93eea77165c13df4f30ca1e12cf236b8e0efebbe5356da",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::icosahedral_he0902"
+}

@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "a249fffd824748df67eee47509249713a6c8fc44cb1189ae102fa0471faf4411",
+      "exported": false,
+      "interface_hash": "sha256:0e9407aeea34cef44ef99afa93a30d2a27b2b513226e1b3ad1952a61652e6104",
+      "package": "watson-rfdiffusion-2023",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ],
+      "role": "local_hole",
+      "version": "0.1.1"
+    }
+  ],
+  "qid": "github:watson_rfdiffusion_2023::alt_copying_pdb_interfaces"
+}
