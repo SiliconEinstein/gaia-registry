@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "e7ee38a9e48deb615320104fedea0b206151a7415e6dc4a2b1606e4b7d350d47",
+      "exported": false,
+      "interface_hash": "sha256:f1bc3867edc4d1b201cdad570267304adb112a62fb3767577bb757400bffbdd8",
+      "package": "staging-hole-source-20260409",
+      "required_by": [
+        "github:staging_hole_source_20260409::main_theorem"
+      ],
+      "role": "local_hole",
+      "version": "1.0.0"
+    }
+  ],
+  "qid": "github:staging_hole_source_20260409::missing_lemma"
+}
