@@ -1,0 +1,7 @@
+{
+  "bridges": [],
+  "ir_hash": "sha256:4c03ba068c8a4d3dbdbe20c56bd22540cc166d747595ce2bc6bb3b61160750bc",
+  "manifest_schema_version": 1,
+  "package": "watson-rfdiffusion-2023",
+  "version": "0.1.1"
+}

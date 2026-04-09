@@ -1,0 +1,340 @@
+{
+  "holes": [
+    {
+      "content": "Solving 23/25 motif scaffolding problems could reflect an easy benchmark rather than genuine method capability.",
+      "content_hash": "8400d34f4dd193a9f9c4cd8873f91c67a410b438be3783d1d8c962ea5c24d3f6",
+      "interface_hash": "sha256:fc92f21aa01ebca2c7d363bef2212c719b6d85b0b49b5fcf57881c707175d10d",
+      "label": "alt_benchmark_other_explanation",
+      "qid": "github:watson_rfdiffusion_2023::alt_benchmark_other_explanation",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::comprehensive_improvement"
+      ]
+    },
+    {
+      "content": "The 19% binder success rate could be inflated by the AF2 filtering step rather than reflecting RFdiffusion's backbone generation quality.",
+      "content_hash": "aba1fa40be88aca62d4ee4ea6320fb73589f4d2cc8ca9fe3ab5fa754aa441eed",
+      "interface_hash": "sha256:6b3fe726e045a3e7082967acbb72914bd668ce92395759623057108cdca67ef5",
+      "label": "alt_binder_other_explanation",
+      "qid": "github:watson_rfdiffusion_2023::alt_binder_other_explanation",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::comprehensive_improvement"
+      ]
+    },
+    {
+      "content": "The SEC elution profiles consistent with expected molecular weights could be coincidental: non-specific aggregation at similar sizes, or incomplete assembly with similar apparent mass.",
+      "content_hash": "d755ea71750c911f39be3ce8e88521fb273d95aacea85aa842a31570d49e56db",
+      "interface_hash": "sha256:3e52db35f2efced029d84b668d6d4440e48cc01f4de6e5ef748926aa592bae3a",
+      "label": "alt_coincidental_sec_profiles",
+      "qid": "github:watson_rfdiffusion_2023::alt_coincidental_sec_profiles",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "The high binder success rate could be due to RFdiffusion recapitulating known binding modes from the PDB training set rather than generating genuinely new protein-protein interfaces.",
+      "content_hash": "a249fffd824748df67eee47509249713a6c8fc44cb1189ae102fa0471faf4411",
+      "interface_hash": "sha256:0e9407aeea34cef44ef99afa93a30d2a27b2b513226e1b3ad1952a61652e6104",
+      "label": "alt_copying_pdb_interfaces",
+      "qid": "github:watson_rfdiffusion_2023::alt_copying_pdb_interfaces",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ]
+    },
+    {
+      "content": "The nsEM particles could represent disordered aggregates that coincidentally show icosahedral-like projections.",
+      "content_hash": "954a036e1a22a056d1c81764acd7454c088caf8d1d9e4383196151a37710e2f9",
+      "interface_hash": "sha256:6554f89f0058c8761912543e2072d8798260aaa7469d2c13cef6a36f36b81f9f",
+      "label": "alt_disordered_aggregates_mimicking_icosahedral",
+      "qid": "github:watson_rfdiffusion_2023::alt_disordered_aggregates_mimicking_icosahedral",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "The cryo-EM density could be fit to a different structural model that does not resemble the RFdiffusion design, indicating the binder adopted an alternative conformation.",
+      "content_hash": "a3bde0382b897ca279b6e63f52a40200ad8beabebab14feb6b8f5bcda5959cc2",
+      "interface_hash": "sha256:42c458d69d5d947e90121cd48b637f6a022f88a79dc3a63b81c782871f46a633",
+      "label": "alt_ha20_alternative_conformation",
+      "qid": "github:watson_rfdiffusion_2023::alt_ha20_alternative_conformation",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::ha20_atomic_accuracy"
+      ]
+    },
+    {
+      "content": "RFdiffusion's scaffolding success could be due to memorizing motifs seen during training rather than genuine generalization to new motifs.",
+      "content_hash": "9ec22980c78179623567eadb3d4c8784bd64cdbc878a5ac7aa42899a381be805",
+      "interface_hash": "sha256:293c6e589e7f85fdd8b1e0117d5f9a9a8e43856b33af7c4080559239fce8961a",
+      "label": "alt_memorization",
+      "qid": "github:watson_rfdiffusion_2023::alt_memorization",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "Improvement without noise could reflect overfitting to the benchmark set rather than genuine model quality.",
+      "content_hash": "f232939be5e9441c9d836fc0a36a2e91cacf1294af4e439b6bf4b8fe4dc985a3",
+      "interface_hash": "sha256:96bae3d25ffa8f041f5c308684bb135a1a974e9b1c620b3a0bb9206dcc05e86e",
+      "label": "alt_noise_free_overfitting",
+      "qid": "github:watson_rfdiffusion_2023::alt_noise_free_overfitting",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "The binders could achieve high BLI signals through non-specific adhesion to the target surface rather than site-specific binding at the designed interface.",
+      "content_hash": "469f28ea375f78790ce2e25a3f34062fb52af4f9a268caad8c756c4992300a3a",
+      "interface_hash": "sha256:344b96151e3b86e4c01f9402efd25496a6f7064fd8a8040e4274b05072c159d0",
+      "label": "alt_nonspecific_adhesion",
+      "qid": "github:watson_rfdiffusion_2023::alt_nonspecific_adhesion",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ]
+    },
+    {
+      "content": "The 55/96 binding success rate for p53-MDM2 scaffolds could be due to non-specific interactions between the expressed proteins and MDM2, rather than specific binding mediated by the scaffolded p53 helix.",
+      "content_hash": "32d2b3eb68958854d556b144ba9db5f4bafc7041dbc52aa0dacc59253c6bee26",
+      "interface_hash": "sha256:ebdd28ec0ea491a5b3e94e5632491dcf8010e7162599ec3cb0d0668a12b86c02",
+      "label": "alt_nonspecific_binding_p53_mdm2",
+      "qid": "github:watson_rfdiffusion_2023::alt_nonspecific_binding_p53_mdm2",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "RFdiffusion's statistical superiority over Hallucination (z=9.5) could be an artifact of the specific benchmark setup or in silico metric rather than genuine method superiority.",
+      "content_hash": "21f294fe7069c326c07a2e6e51ccdc843c6d581a82475d6f01a97d7ae1595445",
+      "interface_hash": "sha256:59712f0146e8a5dc6d423f220e9f6de7ff3b4d5b83c12caaebce53d6fb2c8a13",
+      "label": "alt_outperforms_other_explanation",
+      "qid": "github:watson_rfdiffusion_2023::alt_outperforms_other_explanation",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::comprehensive_improvement"
+      ]
+    },
+    {
+      "content": "The nsEM 2D class averages and 3D reconstructions showing shapes consistent with design models could reflect a different structure that happens to have similar overall dimensions and symmetry.",
+      "content_hash": "4909011f905bc1425481c57348c03476c0274cf5564cb9720015aad977c25ab5",
+      "interface_hash": "sha256:f624b48909502751e1ac42b0894a20edfbcbbcb99b60196b8f498d215954f1fc",
+      "label": "alt_structural_mimicry_in_nsem",
+      "qid": "github:watson_rfdiffusion_2023::alt_structural_mimicry_in_nsem",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "Six of the highest affinity IL-7Rα binders were assessed by competition BLI, and all six competed for binding with a structurally validated positive control binding to the same site, indicating site-specific binding.",
+      "content_hash": "e70bcc5e4f7dfee915f38eefc6f57cace8a41c31bb38034c7637d69d184bdec4",
+      "interface_hash": "sha256:d3c80c4265042f39bf49ba90abb070318f86d8674eea3dc1f7b68560d686334a",
+      "label": "binder_specificity",
+      "qid": "github:watson_rfdiffusion_2023::binder_specificity",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ]
+    },
+    {
+      "content": "DDPMs have three properties well suited to protein design: (1) they generate highly diverse outputs because each denoising trajectory starts from different noise and follows a stochastic path; (2) they can be guided at each step towards specific design objectives through conditioning information; (3) rotationally equivariant DDPMs can model 3D protein structures in a global reference frame independent manner.",
+      "content_hash": "bd0beaafe11137535b4efceac638ee9ce916c001f1c92c9d30d16d7342af097c",
+      "interface_hash": "sha256:49f9a2611f4b5dc6e9392029afdba3c9917815bb80adbae0a2be5560fd8b1432",
+      "label": "ddpm_properties_for_protein_design",
+      "qid": "github:watson_rfdiffusion_2023::ddpm_properties_for_protein_design",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "To generate a new protein backbone, RFdiffusion first initializes random residue frames, makes a denoised prediction, and updates each residue frame by taking a step in the direction of this prediction with some noise added. The reverse step size and noise are chosen so the denoising process matches the distribution of the noising process. Through many such steps (typically 200), random frames converge on realistic protein backbone structures.",
+      "content_hash": "bb40f948d0fc0a5c1d0dee2b432a137431dabb16b920d44069457c72916e7c16",
+      "interface_hash": "sha256:a9f6bada964a149c34697a7ed39d2382b573407f21edb21a87e3e04007921c88",
+      "label": "denoising_process",
+      "qid": "github:watson_rfdiffusion_2023::denoising_process",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "The cryo-EM structure of the highest affinity Influenza binder (HA_20, Kd = 28 nM) in complex with Iowa43 HA was solved at 2.9 Å resolution. 3D heterogeneous refinement without symmetry revealed full occupancy of all three HA stem epitopes by HA_20.",
+      "content_hash": "f28c785bb8cdee51aff6ab293256d2da2fb2e0272fe656c021f909890d33f1aa",
+      "interface_hash": "sha256:75b98c286c9f8a421d2ebedd47c95544106091f1f40dda1027a7b9dba3d7205d",
+      "label": "ha20_cryoem_structure",
+      "qid": "github:watson_rfdiffusion_2023::ha20_cryoem_structure",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::ha20_atomic_accuracy"
+      ]
+    },
+    {
+      "content": "Hallucination with RF solves 15 of the 25 benchmark motif-scaffolding problems and sometimes requires problem-specific hyperparameter optimization.",
+      "content_hash": "93dc709219b4cd1ca2b69fbf2b1cb1364e1ba7472da09cb6f61106da9f8470cf",
+      "interface_hash": "sha256:8be54efd5f5ce2b852cacecc03e73b2446bd7ccf5847f711922d9a6cf04d86bc",
+      "label": "hallucination_benchmark",
+      "qid": "github:watson_rfdiffusion_2023::hallucination_benchmark",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "Of 48 icosahedra selected for experimental validation, one (HE0902, a 15 nm diameter highly porous assembly) formed homogeneous particles observed by nsEM. 2D class averages and 3D reconstruction very closely match the design model, with triangular hubs arrayed around the empty C5 axes. Such large assemblies should be useful as nanomaterials and vaccine scaffolds.",
+      "content_hash": "a93d64d73abd90e6bec1ebd8f3becf10d7d29d8896c41ddfa5f5671cd0c1c952",
+      "interface_hash": "sha256:911cd0dfce4b8f10ac93eea77165c13df4f30ca1e12cf236b8e0efebbe5356da",
+      "label": "icosahedral_he0902",
+      "qid": "github:watson_rfdiffusion_2023::icosahedral_he0902",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "The ability of RFdiffusion to scaffold functional motifs is not related to their presence in the RFdiffusion training set.",
+      "content_hash": "cf456fc23f2b38d692ca4a132934b3274333ad081d2716247fc7c2b665550d48",
+      "interface_hash": "sha256:0f58a00738d3125afe4f905602033801817de05e7733cceb291ee6f15eb59bd3",
+      "label": "motif_not_from_training",
+      "qid": "github:watson_rfdiffusion_2023::motif_not_from_training",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "In 17 out of 23 solved problems, RFdiffusion generated successful solutions with higher in silico success rates when noise was not added during the reverse diffusion trajectories.",
+      "content_hash": "2d41a75900f51e0901477ba642649adc09b5525ac3428f4199305cc689c99511",
+      "interface_hash": "sha256:167bd46291fe0355dcf4bfb1b7588966427078938f96507a93b64ab0730c912a",
+      "label": "noise_free_reverse",
+      "qid": "github:watson_rfdiffusion_2023::noise_free_reverse",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "Binding interfaces designed by RFdiffusion were often highly distinct from interfaces to these targets found in the PDB.",
+      "content_hash": "4c8f154ec5f6bf68330545099e64af1dc5e0e96cfdf185ecb6a9f62679b4f0e4",
+      "interface_hash": "sha256:8acb3481f868d08b9c1c24a10dcb88f102ea1b8d72dd57fc562b057e162e16b3",
+      "label": "novel_interfaces",
+      "qid": "github:watson_rfdiffusion_2023::novel_interfaces",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ]
+    },
+    {
+      "content": "Negative stain electron microscopy (nsEM) characterization of cyclic oligomers showed distinct particles with shapes resembling design models. A C3 design (HE0822, 350 residues/subunit, 1050 total) showed 2D class averages consistent with top and side views, and a 3D reconstruction with the distinctive pinwheel shape matching the design. C5 and C6 designs with >750 residues also showed consistent 2D class averages.",
+      "content_hash": "17421212643fde9453cedf91c7ae5d554d5c064d05654a9cec0e6561160d9480",
+      "interface_hash": "sha256:efbb31c4c7393d29ffa91d247e0d5032d4cc6a510a1dc0d4f9636a4bc4306e06",
+      "label": "nsem_validates_cyclic",
+      "qid": "github:watson_rfdiffusion_2023::nsem_validates_cyclic",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "RFdiffusion significantly outperforms Hallucination with RF at unconditional monomer generation (two-proportion z-test: n = 400 designs per condition, z = 9.5, P = 1.6 × 10⁻²¹). Although Hallucination successfully generates designs up to 100 amino acids in length, in silico success rates rapidly deteriorate beyond this length.",
+      "content_hash": "5c9b34cd4cc40704ef4464004e28129e9ef473b6d431429ba382463fb8c257ef",
+      "interface_hash": "sha256:8d5d51413629db202e4773751929f3f54562cea43f3ebe0b24d6a83f22d064b0",
+      "label": "outperforms_hallucination",
+      "qid": "github:watson_rfdiffusion_2023::outperforms_hallucination",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::comprehensive_improvement"
+      ]
+    },
+    {
+      "content": "RFdiffusion scaffolded the p53 helix that binds MDM2 in the presence of MDM2, so extra interactions could be designed. Out of 96 designs, 55 showed detectable binding at 10 μM. The overall experimental success rate (binding at or above 50% of maximal response) was high.",
+      "content_hash": "393822f0e9feeb76abc443809d6375f760eb72aa865bdf25d568e225305b3795",
+      "interface_hash": "sha256:c2e905ea520a98502804ea57c7ff1f489ecfeda42da3437e992b47128592ce92",
+      "label": "p53_mdm2_design",
+      "qid": "github:watson_rfdiffusion_2023::p53_mdm2_design",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "Fine-tuning RFdiffusion from pretrained RoseTTAFold weights was far more successful than training for an equivalent length of time from untrained (randomly initialized) weights, as measured by in silico success rates on unconditional generation benchmarks.",
+      "content_hash": "fe35c74ca6e2c9bb260b5d9c60d0ffe7eb4baceb361a3c8bcfe8ec6754d970cd",
+      "interface_hash": "sha256:996cc6cef4922c862ea5e1acd898eb15b482d025593b23fd767b8b21f38703c6",
+      "label": "pretraining_benefit",
+      "qid": "github:watson_rfdiffusion_2023::pretraining_benefit",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "The previous Rosetta-based method for de novo binder design from target structure information alone required testing tens of thousands of designs (many thousands screened per campaign) with low experimental success rates, and relied on prespecifying particular protein scaffolds, limiting diversity and shape complementarity. No deep-learning method had previously demonstrated experimental general success in designing completely de novo binders.",
+      "content_hash": "ae352d4b37c144baaff4e9be3a7bb628baa8d10d4669c5fa5833a8e2ef92d007",
+      "interface_hash": "sha256:861b9de45edbf0c7a77a1faf564201fb699f165a0dc422a72b5142634f5c6bfb",
+      "label": "previous_binder_design_limitations",
+      "qid": "github:watson_rfdiffusion_2023::previous_binder_design_limitations",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ]
+    },
+    {
+      "content": "Previous attempts to adapt DDPMs for protein monomer design (by conditioning on small protein 'motifs' or on secondary structure and block-adjacency information) showed limited success in generating sequences that fold to intended structures in silico, probably due to the limited ability of the denoising networks to generate realistic protein backbones, and were not tested experimentally.",
+      "content_hash": "7c2331a5b1cd12e95dc8c90f3440c14c1db7f4e43348d137588c55bf8f313733",
+      "interface_hash": "sha256:93c67d52d52dc8710afd18965508712e052bbb628d5bf5536afba2f6e061c837",
+      "label": "prior_ddpm_limitations",
+      "qid": "github:watson_rfdiffusion_2023::prior_ddpm_limitations",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "RFjoint Inpainting solves 19 of the 25 benchmark motif-scaffolding problems.",
+      "content_hash": "8c933570b1a6b55eed8763a92d00dc9fa89a69e322f499acfd27ab43cea3cc97",
+      "interface_hash": "sha256:0c58be8f78e7fd49254ab52b7a2fbd19e1ce9e2658cde10f0a4feae15db4955a",
+      "label": "rf_inpainting_benchmark",
+      "qid": "github:watson_rfdiffusion_2023::rf_inpainting_benchmark",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance"
+      ]
+    },
+    {
+      "content": "RFjoint Inpainting, a method that fine-tuned RoseTTAFold to complete protein backbones around input functional motifs in a single step, demonstrated that the method can scaffold a wide range of protein functional motifs with atomic accuracy. However, RFjoint Inpainting fails on minimalist site descriptions that do not sufficiently constrain the overall fold and, because it is deterministic, can produce only a limited diversity of designs for a given problem.",
+      "content_hash": "1eee119c3595c8d3369876a463dc4f8a1ada8c9fba39b2afb95a1f824b706742",
+      "interface_hash": "sha256:d04c891a6c74e75092b3dab800b162b02b239888cbb2ac3f18ff42559fdaf5a8",
+      "label": "rf_inpainting_limitations",
+      "qid": "github:watson_rfdiffusion_2023::rf_inpainting_limitations",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "Of 608 designs selected for experimental characterization, at least 87 had oligomerization states closely consistent with the design models by size-exclusion chromatography (SEC) within the 95% confidence interval (126 within the 99% CI).",
+      "content_hash": "1070e11fc7cbe6e3b2435bb5bdbacebdb110d79c7aec9fcf9ef5c6af88060d91",
+      "interface_hash": "sha256:502812bcf86b69619d67c7669ef90dede87bc798b4c109898d810aba2cfba9bb",
+      "label": "sec_validation_oligomers",
+      "qid": "github:watson_rfdiffusion_2023::sec_validation_oligomers",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "Self-conditioning — in which the model conditions on its previous prediction between timesteps, inspired by 'recycling' in AlphaFold2 — notably improved performance on in silico benchmarks encompassing both conditional and unconditional protein design tasks. Increased coherence of predictions within self-conditioned trajectories may at least in part explain these performance increases.",
+      "content_hash": "655a1ab82778d48de2c07db9ca7869ac0d1bdc6925b68ab426d7ecc17ac921a7",
+      "interface_hash": "sha256:1109519f09b0de7a94936502f894b5e0f266cf8a3a1958c58f14e067ddcaf078",
+      "label": "self_conditioning_improvement",
+      "qid": "github:watson_rfdiffusion_2023::self_conditioning_improvement",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate",
+        "github:watson_rfdiffusion_2023::rfdiffusion_benchmark_performance",
+        "github:watson_rfdiffusion_2023::symmetric_high_success"
+      ]
+    },
+    {
+      "content": "The two-orders-of-magnitude improvement in binder design success rate is attributed approximately one order of magnitude to RFdiffusion itself (better backbone generation) and the second order of magnitude to filtering with AF2 (better design selection).",
+      "content_hash": "99fb3bb758934752055f8e81bf513175cd34dc58ca5f4592c37efa87eb02c4a0",
+      "interface_hash": "sha256:74a43c2cce88dec0aa2038786c2e1ea0f01e57a365362f9230b3a3ba546f79ff",
+      "label": "two_orders_attribution",
+      "qid": "github:watson_rfdiffusion_2023::two_orders_attribution",
+      "required_by": [
+        "github:watson_rfdiffusion_2023::binder_success_rate"
+      ]
+    }
+  ],
+  "ir_hash": "sha256:4c03ba068c8a4d3dbdbe20c56bd22540cc166d747595ce2bc6bb3b61160750bc",
+  "manifest_schema_version": 1,
+  "package": "watson-rfdiffusion-2023",
+  "version": "0.1.1"
+}
