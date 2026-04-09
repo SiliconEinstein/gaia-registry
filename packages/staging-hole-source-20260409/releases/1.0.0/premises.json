@@ -1,0 +1,20 @@
+{
+  "ir_hash": "sha256:a1ff4cd3aa379a458392d79586f11f974d0c6aede910adaf1c5cff8ef66fbed5",
+  "manifest_schema_version": 1,
+  "package": "staging-hole-source-20260409",
+  "premises": [
+    {
+      "content": "A missing lemma for the staging source package.",
+      "content_hash": "e7ee38a9e48deb615320104fedea0b206151a7415e6dc4a2b1606e4b7d350d47",
+      "exported": false,
+      "interface_hash": "sha256:f1bc3867edc4d1b201cdad570267304adb112a62fb3767577bb757400bffbdd8",
+      "label": "missing_lemma",
+      "qid": "github:staging_hole_source_20260409::missing_lemma",
+      "required_by": [
+        "github:staging_hole_source_20260409::main_theorem"
+      ],
+      "role": "local_hole"
+    }
+  ],
+  "version": "1.0.0"
+}

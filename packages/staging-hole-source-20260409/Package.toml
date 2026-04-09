@@ -1,0 +1,6 @@
+uuid = "ac12741d-fdf3-461a-8938-bdf4bff990f8"
+name = "staging-hole-source-20260409"
+pypi_name = "staging-hole-source-20260409-gaia"
+repo = "https://github.com/kunyuan/staging-hole-source-20260409-gaia"
+description = "Staging E2E source package for Gaia hole smoke tests"
+created_at = "2026-04-09T02:35:30Z"
