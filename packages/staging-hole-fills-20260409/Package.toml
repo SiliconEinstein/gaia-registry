@@ -1,0 +1,6 @@
+uuid = "7d84415e-6985-496c-97fe-8a1b9f675366"
+name = "staging-hole-fills-20260409"
+pypi_name = "staging-hole-fills-20260409-gaia"
+repo = "https://github.com/kunyuan/staging-hole-fills-20260409-gaia"
+description = "Staging E2E fills package for Gaia hole smoke tests"
+created_at = "2026-04-09T02:37:06Z"

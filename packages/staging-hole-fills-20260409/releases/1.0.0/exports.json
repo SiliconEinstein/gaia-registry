@@ -1,0 +1,15 @@
+{
+  "exports": [
+    {
+      "content": "A result that fills the staging source package hole.",
+      "content_hash": "706c3738356ba437e95ffcd30b24230afc5e7d9f2372fe81efde66261d0e79af",
+      "label": "bridge_result",
+      "qid": "github:staging_hole_fills_20260409::bridge_result",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:f61426da717e62361781ffd78b9b1df33c110a13af68d70113741b0f8080be63",
+  "manifest_schema_version": 1,
+  "package": "staging-hole-fills-20260409",
+  "version": "1.0.0"
+}
