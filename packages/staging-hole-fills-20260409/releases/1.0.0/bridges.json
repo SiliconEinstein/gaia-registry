@@ -1,0 +1,24 @@
+{
+  "bridges": [
+    {
+      "declared_by_owner_of_source": true,
+      "justification": "The bridge package proves the missing lemma required upstream.",
+      "mode": "deduction",
+      "relation_id": "bridge_c28bf268494593ba",
+      "relation_type": "fills",
+      "source_content_hash": "706c3738356ba437e95ffcd30b24230afc5e7d9f2372fe81efde66261d0e79af",
+      "source_qid": "github:staging_hole_fills_20260409::bridge_result",
+      "strength": "exact",
+      "target_dependency_req": "<2.0.0,>=1.0.0",
+      "target_interface_hash": "sha256:f1bc3867edc4d1b201cdad570267304adb112a62fb3767577bb757400bffbdd8",
+      "target_package": "staging-hole-source-20260409",
+      "target_qid": "github:staging_hole_source_20260409::missing_lemma",
+      "target_resolved_version": "1.0.0",
+      "target_role": "local_hole"
+    }
+  ],
+  "ir_hash": "sha256:f61426da717e62361781ffd78b9b1df33c110a13af68d70113741b0f8080be63",
+  "manifest_schema_version": 1,
+  "package": "staging-hole-fills-20260409",
+  "version": "1.0.0"
+}
