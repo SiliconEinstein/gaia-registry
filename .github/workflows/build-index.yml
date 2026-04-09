@@ -22,7 +22,7 @@ jobs:
 
       - name: Commit index updates
         run: |
-          if git diff --quiet -- index; then
+          if [ -z "$(git status --porcelain --untracked-files=all -- index)" ]; then
             echo "No index updates."
             exit 0
           fi
