@@ -1,0 +1,6 @@
+uuid = "fee63979-86c2-4397-b32e-a60f38a3aacb"
+name = "furstenberg-prime-infinitude"
+pypi_name = "furstenberg-prime-infinitude-gaia"
+repo = "https://github.com/atom525/furstenberg-prime-infinitude-gaia"
+description = "Topological proof of infinitude of primes via Furstenberg topology (arXiv:2402.03356)"
+created_at = "2026-04-10T18:23:36Z"
