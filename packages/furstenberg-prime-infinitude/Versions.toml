@@ -1,6 +1,6 @@
 [versions."0.1.0"]
 ir_hash = "sha256:bbf0a31a6f9501fbde51b42e2d7e1296045e148bef4aad132f88e20ecb3477e9"
 git_tag = "v0.1.0"
-git_sha = "19fd8306d8d94a5e5ec76b7d0749f053db368b3c"
+git_sha = "24975b13f86e40d4db6405d8860ca0c25a04ce5f"
 registered_at = "2026-04-10T07:19:22Z"
 gaia_lang_version = "0.3.0"
