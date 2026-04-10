@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "content": "$\\#P = \\aleph_0$ if and only if $P$ is dense in $X = (\\mathbb{N}, \\tau)$, where $P$ is the set of prime numbers and $\\#P$ denotes its cardinality.\n\n($\\Rightarrow$) If there are infinitely many primes, then for any $n > 1$, there exists a prime $p > n$, and $\\gcd(n, p) = 1$ implies $p \\in \\sigma_n \\cap P$. Since $\\sigma_1 = \\mathbb{N} \\supseteq P$, every basic open set meets $P$.\n\n($\\Leftarrow$) If $P$ is dense, let $\\{p_1, \\ldots, p_k\\}$ be any finite collection of primes and set $x = p_1 \\cdots p_k$. The basic open set $\\sigma_x$ contains no $p_i$ (since $\\gcd(p_i, x) = p_i \\neq 1$), but density forces $\\sigma_x \\cap P \\neq \\emptyset$, producing a prime $q \\notin \\{p_1, \\ldots, p_k\\}$. Hence $P$ is infinite.",
+      "content_hash": "2242ecec1c8e760cb2ec1050214767bae4d27d74c7ae4e6cb3dd30c5ad2689a0",
+      "label": "thm_density_iff_infinite",
+      "qid": "github:furstenberg_prime_infinitude::thm_density_iff_infinite",
+      "type": "claim"
+    },
+    {
+      "content": "There are infinitely many prime numbers, i.e., $\\#P = \\aleph_0$.",
+      "content_hash": "d4963a2ef247d6066d03bf0ef457e742fa9c6ff211d29ef9b154bfd5ed64e29e",
+      "label": "thm_infinitude_primes",
+      "qid": "github:furstenberg_prime_infinitude::thm_infinitude_primes",
+      "type": "claim"
+    },
+    {
+      "content": "$P$ is dense in $X_1 = (\\mathbb{N} \\setminus \\{1\\}, \\tau_1)$, i.e., $\\operatorname{cl}_{X_1}(P) = N_1$.\n\nThe proof combines three ingredients:\n\n**(0.10)** By a standard topological fact, $\\bigcup_{p \\in P} \\operatorname{cl}_{X_1}(\\{p\\}) \\subseteq \\operatorname{cl}_{X_1}(P) \\subseteq N_1$.\n\n**(0.11)** By Lemma 0.4, $\\operatorname{cl}_X(\\{p\\}) = M_p$ for each prime $p$, so $\\bigcup_{p \\in P} \\operatorname{cl}_{X_1}(\\{p\\}) = \\bigcup_{p \\in P} (M_p \\cap N_1) = \\bigcup_{p \\in P} M_p$ (since $M_p \\subseteq N_1$ for all primes $p \\geq 2$).\n\n**(0.12)** By the Fundamental Theorem of Arithmetic, $\\bigcup_{p \\in P} M_p = N_1$.\n\nChaining: $N_1 = \\bigcup_{p \\in P} M_p = \\bigcup_{p \\in P} \\operatorname{cl}_{X_1}(\\{p\\}) \\subseteq \\operatorname{cl}_{X_1}(P) \\subseteq N_1$, hence $\\operatorname{cl}_{X_1}(P) = N_1$.",
+      "content_hash": "d1d09bbfcff3d21f3bffebfe9daa64db7de95ea7673de76010cd8a5da9aff672",
+      "label": "thm_p_dense_x1",
+      "qid": "github:furstenberg_prime_infinitude::thm_p_dense_x1",
+      "type": "claim"
+    },
+    {
+      "content": "Let $A \\subseteq P$ be a non-empty subset of primes. Then $A$ is dense in $X = (\\mathbb{N}, \\tau)$ if and only if $\\#A = \\aleph_0$. The proof follows the same argument as Theorem 0.7 with $P$ replaced by $A$:\n\n($\\Rightarrow$) If $\\#A = \\aleph_0$, for any $n > 1$ there exists $p \\in A$ with $p > n$, so $p \\in \\sigma_n \\cap A$.\n\n($\\Leftarrow$) If $A$ is dense, for any finite subset $\\{p_1, \\ldots, p_k\\} \\subseteq A$, the set $\\sigma_{p_1 \\cdots p_k} \\cap A$ is non-empty and contains a prime not in $\\{p_1, \\ldots, p_k\\}$.",
+      "content_hash": "06a0d55b610ff1deca6d1dc5c3ed0769f5044818c404d731e66aff596cf5059d",
+      "label": "thm_subset_dense_iff_infinite",
+      "qid": "github:furstenberg_prime_infinitude::thm_subset_dense_iff_infinite",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:bbf0a31a6f9501fbde51b42e2d7e1296045e148bef4aad132f88e20ecb3477e9",
+  "manifest_schema_version": 1,
+  "package": "furstenberg-prime-infinitude",
+  "version": "0.1.0"
+}
