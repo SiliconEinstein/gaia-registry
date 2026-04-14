@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:b4e22f5460ffc7f67d20a21d1f602a76ce4d38a19f062fcd0ef9ac18bd5a17d1",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::sulfur_sc"
+}

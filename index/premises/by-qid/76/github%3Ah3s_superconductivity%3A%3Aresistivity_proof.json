@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "6798b8a977509406983177c211f85f0006948eae533ba2a10cfca0d1ed438698",
+      "exported": false,
+      "interface_hash": "sha256:e4498cc5bbf5c5acf634ab98ec27c79ee62e66c02e0a25d0634580f6062f1942",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::superconductivity_confirmed"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::resistivity_proof"
+}

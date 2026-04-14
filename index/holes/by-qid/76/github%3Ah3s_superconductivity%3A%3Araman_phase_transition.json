@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:bb38725c1e59f3ebcfcfe2eed0062e386f07446067340e3586f5e81ff262d54a",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::raman_phase_transition"
+}

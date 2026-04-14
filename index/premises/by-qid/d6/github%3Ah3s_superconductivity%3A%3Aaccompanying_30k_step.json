@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "ac2343947de9c76acd00c85daf4ca18798f5ab91958cb75c7180f786f0ac4838",
+      "exported": false,
+      "interface_hash": "sha256:345c1f73e4528cd64ae791c7f81d301a227c4686a181d515ecde299d28906985",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::accompanying_30k_step"
+}

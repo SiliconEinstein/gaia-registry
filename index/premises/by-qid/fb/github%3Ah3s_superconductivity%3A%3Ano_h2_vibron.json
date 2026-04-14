@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "5222fbbe00f8fc22ba23276c539f9a453a9a24f2f485d5ec03aa481ea9025577",
+      "exported": false,
+      "interface_hash": "sha256:b4a7de3a36ad386cbffcb95aeb86ed4a701f44bdd0d812c82be059848eb6ac5c",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::no_h2_vibron"
+}

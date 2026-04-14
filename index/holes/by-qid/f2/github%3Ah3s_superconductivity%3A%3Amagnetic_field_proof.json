@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:c22cdc35444fe32f7fac8b3e1571161fde53947b91695eb6180a607faa170a9d",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::superconductivity_confirmed"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::magnetic_field_proof"
+}

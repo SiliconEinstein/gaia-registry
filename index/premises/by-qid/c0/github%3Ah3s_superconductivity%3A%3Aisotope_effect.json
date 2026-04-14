@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "67b1f87907df378a16c01432a27ccc9431014ab8eca8243e239da17f7cec71cc",
+      "exported": false,
+      "interface_hash": "sha256:beb9081ee7e3b62217bd9e1b1cbfa134c426d140c645081b3f25c2391f7184ee",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::superconductivity_confirmed"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::isotope_effect"
+}

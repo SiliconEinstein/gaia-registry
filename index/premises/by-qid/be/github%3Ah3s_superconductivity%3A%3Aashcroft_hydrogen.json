@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "93d6b2161062eef00757494925acd071c527484e384f38366b8bab56a4e80c5c",
+      "exported": false,
+      "interface_hash": "sha256:50342818d377c5cfc5c9bf0409c8754fc115abbf6426653036b508a6e46852b4",
+      "package": "h3s-superconductivity",
+      "required_by": [
+        "github:h3s_superconductivity::hydrogen_materials_prospect"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::ashcroft_hydrogen"
+}
