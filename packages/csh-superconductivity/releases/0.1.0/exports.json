@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "content": "The original paper presented four lines of evidence for room-temperature superconductivity in C-S-H: (1) zero resistance at 287.7 K, (2) diamagnetic susceptibility signal, (3) magnetic field suppression of Tc, and (4) 13C isotope effect. Together these were claimed to establish bulk superconductivity at room temperature.",
+      "content_hash": "b6b105b034e0335ea773197f0b374db651b59ad737102e2470b504245a10db45",
+      "label": "original_sc_evidence",
+      "qid": "github:csh_superconductivity::original_sc_evidence",
+      "type": "claim"
+    },
+    {
+      "content": "Four-probe electrical resistance measurements in the DAC showed sharp drops to zero resistance at multiple pressures in the C-S-H system. The maximum transition temperature observed was Tc = 287.7 +/- 1.2 K (approximately 15 C) at 267 +/- 10 GPa — room temperature.",
+      "content_hash": "ff174d32bd1c4056acef217076e8fa447826e34ce7084ca8bdc1308afda25581",
+      "label": "resistance_observation",
+      "qid": "github:csh_superconductivity::resistance_observation",
+      "type": "claim"
+    },
+    {
+      "content": "Room-temperature superconductivity was achieved in a carbonaceous sulfur hydride (C-S-H) system at Tc = 287.7 +/- 1.2 K under 267 GPa. This represents the first observation of superconductivity above room temperature.",
+      "content_hash": "afa7c4a57e9f005bda223b62ff1a6d253de51aec0b084cdfce7a78e5cf128f37",
+      "label": "room_temperature_sc",
+      "qid": "github:csh_superconductivity::room_temperature_sc",
+      "type": "claim"
+    },
+    {
+      "content": "AC magnetic susceptibility measurements up to 190 GPa showed a diamagnetic signal consistent with the Meissner effect at temperatures matching the resistance-determined Tc. This provides independent confirmation of bulk superconductivity in C-S-H.",
+      "content_hash": "09594f65a94f8e70c3dc0e3885760cda18b4bd21bb2df59284876afef30517f9",
+      "label": "susceptibility_observation",
+      "qid": "github:csh_superconductivity::susceptibility_observation",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:b9dfbf4fbd2ce4ba3288c07a4a522d6fc4dc80d10b6b50a843be379089eb105f",
+  "manifest_schema_version": 1,
+  "package": "csh-superconductivity",
+  "version": "0.1.0"
+}

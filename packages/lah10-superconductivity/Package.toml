@@ -1,0 +1,6 @@
+uuid = "b7e3a1c4-9f2d-4e8b-a6c1-d5f7e2b4a8c3"
+name = "lah10-superconductivity"
+pypi_name = "lah10-superconductivity-gaia"
+repo = "https://github.com/kunyuan/lah10-superconductivity-gaia"
+description = "Gaia knowledge package: Superconductivity at 250 K in lanthanum hydride (Drozdov et al., Nature 569, 528, 2019; arXiv:1812.01561)"
+created_at = "2026-04-14T03:30:34Z"
