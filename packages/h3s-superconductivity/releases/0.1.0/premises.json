@@ -1,0 +1,140 @@
+{
+  "ir_hash": "sha256:b49f49f851d7982196f112ea6d7bbe97be5738652b051f870e818a783317ca3a",
+  "manifest_schema_version": 1,
+  "package": "h3s-superconductivity",
+  "premises": [
+    {
+      "content": "The 190 K superconducting step is frequently accompanied by a second step at Tc ~ 30 K, which disappears with time (>1 day) or further pressure application while the 190 K step sharpens. R(T) oscillations with a period of 25–30 K are observed in multiple runs.",
+      "content_hash": "ac2343947de9c76acd00c85daf4ca18798f5ab91958cb75c7180f786f0ac4838",
+      "exported": false,
+      "interface_hash": "sha256:345c1f73e4528cd64ae791c7f81d301a227c4686a181d515ecde299d28906985",
+      "label": "accompanying_30k_step",
+      "qid": "github:h3s_superconductivity::accompanying_30k_step",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Ashcroft (1968) predicted that metallic hydrogen would be a high-temperature superconductor due to: (1) very high vibrational frequencies from the light hydrogen atom, (2) strong electron-phonon interaction, and (3) covalent bonding. Subsequent calculations predict Tc = 100–240 K for molecular hydrogen and 300–350 K for the atomic phase at 500 GPa.",
+      "content_hash": "93d6b2161062eef00757494925acd071c527484e384f38366b8bab56a4e80c5c",
+      "exported": false,
+      "interface_hash": "sha256:50342818d377c5cfc5c9bf0409c8754fc115abbf6426653036b508a6e46852b4",
+      "label": "ashcroft_hydrogen",
+      "qid": "github:h3s_superconductivity::ashcroft_hydrogen",
+      "required_by": [
+        "github:h3s_superconductivity::hydrogen_materials_prospect"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Duan et al. (2014) studied the van der Waals compound (H₂S)₂H₂ and predicted: (1) above 111 GPa, H₃S molecular units form; (2) above 180 GPa, sulfur coordination number reaches 6; (3) Tc ~ 160 K and ~190 K for these two phases. These predictions closely match the experimental observations.",
+      "content_hash": "66631de3ddf3f8bea9b851007b2c71adaf7f51092c556a99af024df8d66a5ac0",
+      "exported": false,
+      "interface_hash": "sha256:061b1efa7b9f2a71b97c8a707da32619ae8c8945ba5e8fff1907fc876eb6b132",
+      "label": "duan_prediction",
+      "qid": "github:h3s_superconductivity::duan_prediction",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Li et al. (2014) predicted from ab initio calculations that H₂S metallizes at ~96 GPa and becomes a superconductor with Tc ~ 80 K at 160 GPa. At P > 130 GPa, new stable structures were found. Precipitation of sulfur was predicted to be 'very unlikely.'",
+      "content_hash": "abbc374857fe7d28f5adadaf4a7627c9ada42f87ace96e201c5a1ba0400a6d95",
+      "exported": false,
+      "interface_hash": "sha256:721ba48273e82a854b6b974d29e14cc89aab46aa637502987e92ba45a2bb88a4",
+      "label": "h2s_theory_prediction",
+      "qid": "github:h3s_superconductivity::h2s_theory_prediction",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "A second superconducting state with Tc ~ 190 K (arXiv v1) / 203 K (Nature) is found by applying pressure P > 150 GPa at temperatures T > 220 K (high-temperature route). This Tc has weak pressure dependence — qualitatively different from the low-T route.",
+      "content_hash": "31ffff63fc941e4b5a57dffe18e9712d5c60dc7b2a2eea10fa1293286fcd9e24",
+      "exported": false,
+      "interface_hash": "sha256:7b46b96f209ac27980c1007a53e552bf8caa207f6c7e0657a4afdd8de94adc53",
+      "label": "high_tc_discovery",
+      "qid": "github:h3s_superconductivity::high_tc_discovery",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Deuterium substitution (D₂S) shows a strong isotope effect: H₂S Tc ~ 60 K → D₂S Tc ~ 30 K, and H₂S Tc ~ 185 K → D₂S Tc ~ 90 K. The isotope exponent α ≈ 0.5, matching the BCS prediction Tc ∝ M^(−α) with α = 0.5 for the phonon mechanism. This confirms phonon-mediated (conventional BCS) superconductivity.",
+      "content_hash": "67b1f87907df378a16c01432a27ccc9431014ab8eca8243e239da17f7cec71cc",
+      "exported": false,
+      "interface_hash": "sha256:beb9081ee7e3b62217bd9e1b1cbfa134c426d140c645081b3f25c2391f7184ee",
+      "label": "isotope_effect",
+      "qid": "github:h3s_superconductivity::isotope_effect",
+      "required_by": [
+        "github:h3s_superconductivity::superconductivity_confirmed"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Tc shifts to lower temperatures with magnetic field up to 7 Tesla for both superconducting states. Extrapolation using Hc(T) = Hc0·(1 − (T/Tc)²) gives estimated upper critical fields: Hc2 ~ 25 T for the Tc ~ 60 K state and Hc2 ~ 70 T for the Tc ~ 185 K state. The high Hc2 is characteristic of a type-II superconductor.",
+      "content_hash": "8e81a58859b5a76259254f63e21b4f77e2f75f1f6bfa5f2afd744548b34401ee",
+      "exported": false,
+      "interface_hash": "sha256:c22cdc35444fe32f7fac8b3e1571161fde53947b91695eb6180a607faa170a9d",
+      "label": "magnetic_field_proof",
+      "qid": "github:h3s_superconductivity::magnetic_field_proof",
+      "required_by": [
+        "github:h3s_superconductivity::superconductivity_confirmed"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "The strong characteristic vibron of molecular H₂ was never observed in Raman spectra despite using a sensitive spectrometer and ultralow luminescence synthetic diamond anvils. This rules out simple decomposition H₂S → H₂ + S.",
+      "content_hash": "5222fbbe00f8fc22ba23276c539f9a453a9a24f2f485d5ec03aa481ea9025577",
+      "exported": false,
+      "interface_hash": "sha256:b4a7de3a36ad386cbffcb95aeb86ed4a701f44bdd0d812c82be059848eb6ac5c",
+      "label": "no_h2_vibron",
+      "qid": "github:h3s_superconductivity::no_h2_vibron",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Raman measurements of the sample with Tc ~ 190 K show a phase transformation at ~180 GPa upon pressure release. This matches the predicted structural transition in Duan et al.'s calculations and is distinct from elemental sulfur's phase transition at ~160 GPa.",
+      "content_hash": "58ccb58d0185a5065bf010a88934948867fbd7673542730725606ab11c83a99d",
+      "exported": false,
+      "interface_hash": "sha256:bb38725c1e59f3ebcfcfe2eed0062e386f07446067340e3586f5e81ff262d54a",
+      "label": "raman_phase_transition",
+      "qid": "github:h3s_superconductivity::raman_phase_transition",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "The minimum resistance in the high-Tc state corresponds to resistivity ρ ≤ 10⁻¹¹ Ω·m — about two orders of magnitude less than pure copper at the same temperature. At 144 K specifically: ρ = 1.7×10⁻¹⁰ Ω·m, which is 50 times lower than copper (ρ_Cu = 70×10⁻¹⁰ Ω·m at 150 K).",
+      "content_hash": "6798b8a977509406983177c211f85f0006948eae533ba2a10cfca0d1ed438698",
+      "exported": false,
+      "interface_hash": "sha256:e4498cc5bbf5c5acf634ab98ec27c79ee62e66c02e0a25d0634580f6062f1942",
+      "label": "resistivity_proof",
+      "qid": "github:h3s_superconductivity::resistivity_proof",
+      "required_by": [
+        "github:h3s_superconductivity::superconductivity_confirmed"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Elemental sulfur becomes metallic above 95 GPa and is a superconductor, but with a low Tc (measured values shown in Fig. 2a as dark yellow points). Sulfur superconductivity alone cannot explain the high Tc observed in H₂S samples.",
+      "content_hash": "d1f110611b34e9bf95bf3fc10976ca2ff3089b7498f5d551ff0fff8a58af77d7",
+      "exported": false,
+      "interface_hash": "sha256:b4e22f5460ffc7f67d20a21d1f602a76ce4d38a19f062fcd0ef9ac18bd5a17d1",
+      "label": "sulfur_sc",
+      "qid": "github:h3s_superconductivity::sulfur_sc",
+      "required_by": [
+        "github:h3s_superconductivity::high_tc_is_h3s"
+      ],
+      "role": "local_hole"
+    }
+  ],
+  "version": "0.1.0"
+}
