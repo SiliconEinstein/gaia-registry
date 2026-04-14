@@ -100,6 +100,14 @@ jobs:
             --source-dir "$GITHUB_WORKSPACE/pkg" \
             --deps-dir "$GITHUB_WORKSPACE/deps"
 
+          python3 -c "
+          import re, pathlib
+          p = pathlib.Path('pyproject.toml')
+          t = p.read_text()
+          s = re.sub(r'\n?\[tool\.uv\.sources\]\n(?:[^\[]*(?:\n|$))*', '\n', t)
+          if s != t: p.write_text(s)
+          "
+
           uv pip install -e .
 
           gaia compile .
