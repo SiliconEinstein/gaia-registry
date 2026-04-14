@@ -1,0 +1,7 @@
+{
+  "bridges": [],
+  "ir_hash": "sha256:c6ec8dc88933158ded4c8524f3017f2a23680d1417a4f37667eb21c441b8ed2d",
+  "manifest_schema_version": 1,
+  "package": "hirsch-csh-critique",
+  "version": "0.1.0"
+}
