@@ -1,0 +1,57 @@
+{
+  "ir_hash": "sha256:b9dfbf4fbd2ce4ba3288c07a4a522d6fc4dc80d10b6b50a843be379089eb105f",
+  "manifest_schema_version": 1,
+  "package": "csh-superconductivity",
+  "premises": [
+    {
+      "content": "Application of external magnetic fields suppressed the superconducting transition temperature, consistent with the expected behavior of a type-II superconductor. The upper critical field Hc2(0) was estimated from the field-dependent Tc measurements.",
+      "content_hash": "10b52475bdaa3921dd3a67854d52c0858186dd01d32dc479f3fbc6cff47d8395",
+      "exported": false,
+      "interface_hash": "sha256:f094b8b831e845b386d83376582c323e0b9e3f756b2ecc13428affe653a2df20",
+      "label": "field_suppression",
+      "qid": "github:csh_superconductivity::field_suppression",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Carbon-13 isotope substitution (13C for 12C) showed a shift in Tc consistent with the BCS isotope effect, suggesting phonon-mediated superconductivity with carbon phonon modes contributing to the pairing mechanism.",
+      "content_hash": "522e97e452d2095ec5ac7230208b1b56a852a494ad2b20d663ac7ab955953019",
+      "exported": false,
+      "interface_hash": "sha256:5b73e55380a84282a4552948f8ebecebf9a11a424730a16dd76fcc5cd2b9233b",
+      "label": "isotope_effect_observed",
+      "qid": "github:csh_superconductivity::isotope_effect_observed",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "Four-probe electrical resistance measurements in the DAC showed sharp drops to zero resistance at multiple pressures in the C-S-H system. The maximum transition temperature observed was Tc = 287.7 +/- 1.2 K (approximately 15 C) at 267 +/- 10 GPa — room temperature.",
+      "content_hash": "ff174d32bd1c4056acef217076e8fa447826e34ce7084ca8bdc1308afda25581",
+      "exported": true,
+      "interface_hash": "sha256:d0bfd0736c17dfe0278ba76086f6625ae81c7fd9449638b647652c8e9869fc54",
+      "label": "resistance_observation",
+      "qid": "github:csh_superconductivity::resistance_observation",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence",
+        "github:csh_superconductivity::room_temperature_sc"
+      ],
+      "role": "local_hole"
+    },
+    {
+      "content": "AC magnetic susceptibility measurements up to 190 GPa showed a diamagnetic signal consistent with the Meissner effect at temperatures matching the resistance-determined Tc. This provides independent confirmation of bulk superconductivity in C-S-H.",
+      "content_hash": "09594f65a94f8e70c3dc0e3885760cda18b4bd21bb2df59284876afef30517f9",
+      "exported": true,
+      "interface_hash": "sha256:cfbcff76c22468c7b84077bc750a4633551d785e028c55c398f29a68a7316a04",
+      "label": "susceptibility_observation",
+      "qid": "github:csh_superconductivity::susceptibility_observation",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence"
+      ],
+      "role": "local_hole"
+    }
+  ],
+  "version": "0.1.0"
+}

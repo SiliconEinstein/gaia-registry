@@ -1,0 +1,6 @@
+uuid = "c8d4b2e5-1a3f-5c9d-b7e2-f6a8c3d1e5b4"
+name = "csh-superconductivity"
+pypi_name = "csh-superconductivity-gaia"
+repo = "https://github.com/kunyuan/csh-superconductivity-gaia"
+description = "Gaia knowledge package: Room-temperature superconductivity in a carbonaceous sulfur hydride (Snider et al., Nature 586, 373, 2020)"
+created_at = "2026-04-14T03:30:52Z"
