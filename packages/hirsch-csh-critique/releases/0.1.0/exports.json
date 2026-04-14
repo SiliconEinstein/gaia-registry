@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "content": "The Snider et al. C-S-H paper exhibited data processing integrity failures: non-standard background subtraction that statistical analysis suggests was reversed (adding rather than subtracting background), 'raw' data that were not actually raw, and anomalies present at all measured pressures. A pattern of data integrity issues was further established by the subsequent retraction of the Dias group's lutetium hydride paper.",
+      "content_hash": "4bd87fd8fa20de49e77d07bca43f88882c07d4b4ef5a8aefeff4b2568b81c168",
+      "label": "data_integrity_failure",
+      "qid": "github:hirsch_csh_critique::data_integrity_failure",
+      "type": "claim"
+    },
+    {
+      "content": "Room-temperature superconductivity in the C-S-H system, as claimed by Snider et al., has NOT been confirmed. The magnetic susceptibility evidence — essential for establishing bulk SC — was shown to be unreliable through independent statistical analysis. Two independent replication attempts by expert groups failed to reproduce the room-temperature Tc.",
+      "content_hash": "a498533e0e8551785969f56b6e548034a022f0d91cf78581f06af9df62111e39",
+      "label": "rtsc_not_confirmed",
+      "qid": "github:hirsch_csh_critique::rtsc_not_confirmed",
+      "type": "claim"
+    },
+    {
+      "content": "The magnetic susceptibility data in Snider et al. are unreliable and cannot be used as evidence for superconductivity. The non-standard, user-defined background subtraction procedure was not specified in the paper, the data show statistical signatures of fabrication, and no valid processing method can reproduce the published results from the reported raw measurements.",
+      "content_hash": "ddbc68eac8f38a21675601f6f1c86392e0d9f0b0ff2ff6e3c353df1f36d4fd5a",
+      "label": "susceptibility_data_invalid",
+      "qid": "github:hirsch_csh_critique::susceptibility_data_invalid",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:c6ec8dc88933158ded4c8524f3017f2a23680d1417a4f37667eb21c441b8ed2d",
+  "manifest_schema_version": 1,
+  "package": "hirsch-csh-critique",
+  "version": "0.1.0"
+}
