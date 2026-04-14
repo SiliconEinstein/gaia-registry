@@ -1,0 +1,6 @@
+uuid = "282f553a-7ced-41ba-ba33-4b1006d760da"
+name = "h3s-superconductivity"
+pypi_name = "h3s-superconductivity-gaia"
+repo = "https://github.com/kunyuan/h3s-superconductivity-gaia"
+description = "Gaia knowledge package: Conventional superconductivity at 203 K in sulfur hydride (Drozdov et al., Nature 525, 73, 2015; arXiv:1412.0460)"
+created_at = "2026-04-14T03:30:15Z"
