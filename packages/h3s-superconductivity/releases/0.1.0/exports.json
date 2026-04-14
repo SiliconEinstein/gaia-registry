@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "content": "Conventional (phonon-mediated, BCS-type) superconductivity has been demonstrated above 190 K (arXiv) / 203 K (Nature) — the highest Tc for any superconductor at the time of publication. This breaks the long-standing preconception that BCS superconductors are limited to Tc ~ 30 K and surpasses even the cuprate record of 164 K under pressure.",
+      "content_hash": "a8b09ce83303203210521d8f1552b0ea198cec1b866166da0dcc829ea625ae58",
+      "label": "conventional_sc_above_200k",
+      "qid": "github:h3s_superconductivity::conventional_sc_above_200k",
+      "type": "claim"
+    },
+    {
+      "content": "The high-Tc superconductivity at ~190–203 K is attributed to H₃S (trihydrogen sulfide) formed by dissociation of H₂S under pressure. This identification is supported by: (1) theoretical predictions from Duan et al. matching both the Tc values and structural transitions, (2) Raman evidence of a phase transition at 180 GPa consistent with H₃S, and (3) elimination of alternative explanations (pure H₂S, elemental sulfur, H₂ + S decomposition).",
+      "content_hash": "2a2d5c3bee5b22e2b312998b6c6d3fa9a5c6aec3c13504a7d868d3a1638fc413",
+      "label": "high_tc_is_h3s",
+      "qid": "github:h3s_superconductivity::high_tc_is_h3s",
+      "type": "claim"
+    },
+    {
+      "content": "Since H₂S has only a moderate hydrogen content, high-Tc superconductivity can be expected in a wide range of hydrogen-containing materials. Candidates include carbon-based materials (fullerenes, aromatic hydrocarbons, graphanes) which could potentially be turned superconducting by doping or gating instead of extreme pressure. Hydrogen atoms are essential for providing high-frequency phonon modes and strong electron-phonon coupling.",
+      "content_hash": "e4598769825a6ab9e01feb0c2145aba60409cdc2ac97da0e3922a187fe0d0018",
+      "label": "hydrogen_materials_prospect",
+      "qid": "github:h3s_superconductivity::hydrogen_materials_prospect",
+      "type": "claim"
+    },
+    {
+      "content": "The observed resistance drops represent genuine superconducting transitions, confirmed by three independent lines of evidence: (1) resistivity far below copper, (2) magnetic field suppression of Tc, and (3) a strong isotope effect consistent with BCS theory. The high-Tc state at ~190–203 K is a conventional (phonon-mediated) superconductor.",
+      "content_hash": "c27f4d46b2268099185e6d5db3310dc7f8ac7321317eda4ffe58b65a0b2494e2",
+      "label": "superconductivity_confirmed",
+      "qid": "github:h3s_superconductivity::superconductivity_confirmed",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:b49f49f851d7982196f112ea6d7bbe97be5738652b051f870e818a783317ca3a",
+  "manifest_schema_version": 1,
+  "package": "h3s-superconductivity",
+  "version": "0.1.0"
+}
