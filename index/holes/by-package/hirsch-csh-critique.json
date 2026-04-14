@@ -1,0 +1,49 @@
+{
+  "package": "hirsch-csh-critique",
+  "versions": {
+    "0.1.0": {
+      "holes": [
+        {
+          "content": "Van der Marel and Hirsch (arXiv:2201.07686, 2022) performed a detailed statistical analysis of the magnetic susceptibility data in Snider et al. Their key finding: the published data are compatible with a REVERSED procedure in which a background signal was ADDED to a predetermined superconducting-like result, rather than subtracted from raw measurements.",
+          "content_hash": "9296cade423002fde341438f3f372802a4bb83dd56d4ea25b0bb48af9d02ce25",
+          "interface_hash": "sha256:5143dfe00f4cc57c8e2c6ff23570e83671c13498cfd5efa1efd774b5d66623b5",
+          "label": "background_subtraction_reversed",
+          "qid": "github:hirsch_csh_critique::background_subtraction_reversed",
+          "required_by": [
+            "github:hirsch_csh_critique::susceptibility_data_invalid"
+          ]
+        },
+        {
+          "content": "A subsequent paper by Ranga Dias's group claiming superconductivity in nitrogen-doped lutetium hydride (Nature 2023) was also retracted. Dias faced investigations for data integrity issues across multiple publications, establishing a pattern of questionable data practices.",
+          "content_hash": "21083a79fbd69fab9a88101437619e73456d68402dfbf3be047af105df676d3e",
+          "interface_hash": "sha256:a15e7a14da166225bd4e1e1dc36f656c21ccc397efbab63e0036499b68380f2e",
+          "label": "dias_broader_issues",
+          "qid": "github:hirsch_csh_critique::dias_broader_issues",
+          "required_by": [
+            "github:hirsch_csh_critique::data_integrity_failure"
+          ]
+        },
+        {
+          "content": "The Eremets group at the Max Planck Institute spent 6 months attempting to replicate the C-S-H results. They observed superconductivity in some C-S-H samples only up to approximately 200 K — far below the claimed 287.7 K room-temperature Tc. This is consistent with conventional hydride superconductivity in the pressure range but NOT with the room-temperature claims.",
+          "content_hash": "2df37396a035cc2e6e796829d7ba5ac08dd18448050ee40ff7f959f1f61e6ca1",
+          "interface_hash": "sha256:2e869c7a02e24ab191f81e92ff52816f641037c51d1ae5c9c378dc57eac97701",
+          "label": "eremets_failed_replication",
+          "qid": "github:hirsch_csh_critique::eremets_failed_replication",
+          "required_by": [
+            "github:hirsch_csh_critique::rtsc_not_confirmed"
+          ]
+        },
+        {
+          "content": "The Goncharov group at the Carnegie Institution could not synthesize any C-S-H compound undergoing the structural transition at the pressure claimed by Snider et al. They were unable to reproduce even the starting material conditions for the claimed room-temperature superconductor.",
+          "content_hash": "73cebb732cc674dc7a4838e5da78ad6377bbe71162cb290dfa6cdffaff9c3486",
+          "interface_hash": "sha256:028c2434fe084a9504590f71b98a53fc2219acc79c6ddabe738fd41774f09db5",
+          "label": "goncharov_failed_replication",
+          "qid": "github:hirsch_csh_critique::goncharov_failed_replication",
+          "required_by": [
+            "github:hirsch_csh_critique::rtsc_not_confirmed"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "21083a79fbd69fab9a88101437619e73456d68402dfbf3be047af105df676d3e",
+      "exported": false,
+      "interface_hash": "sha256:a15e7a14da166225bd4e1e1dc36f656c21ccc397efbab63e0036499b68380f2e",
+      "package": "hirsch-csh-critique",
+      "required_by": [
+        "github:hirsch_csh_critique::data_integrity_failure"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:hirsch_csh_critique::dias_broader_issues"
+}

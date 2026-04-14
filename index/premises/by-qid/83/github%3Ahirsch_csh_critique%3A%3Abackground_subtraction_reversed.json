@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "9296cade423002fde341438f3f372802a4bb83dd56d4ea25b0bb48af9d02ce25",
+      "exported": false,
+      "interface_hash": "sha256:5143dfe00f4cc57c8e2c6ff23570e83671c13498cfd5efa1efd774b5d66623b5",
+      "package": "hirsch-csh-critique",
+      "required_by": [
+        "github:hirsch_csh_critique::susceptibility_data_invalid"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:hirsch_csh_critique::background_subtraction_reversed"
+}

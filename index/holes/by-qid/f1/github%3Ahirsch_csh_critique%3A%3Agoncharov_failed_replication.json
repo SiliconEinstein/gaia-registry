@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:028c2434fe084a9504590f71b98a53fc2219acc79c6ddabe738fd41774f09db5",
+      "package": "hirsch-csh-critique",
+      "required_by": [
+        "github:hirsch_csh_critique::rtsc_not_confirmed"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:hirsch_csh_critique::goncharov_failed_replication"
+}

@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "2df37396a035cc2e6e796829d7ba5ac08dd18448050ee40ff7f959f1f61e6ca1",
+      "exported": false,
+      "interface_hash": "sha256:2e869c7a02e24ab191f81e92ff52816f641037c51d1ae5c9c378dc57eac97701",
+      "package": "hirsch-csh-critique",
+      "required_by": [
+        "github:hirsch_csh_critique::rtsc_not_confirmed"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:hirsch_csh_critique::eremets_failed_replication"
+}
