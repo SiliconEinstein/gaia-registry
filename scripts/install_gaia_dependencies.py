@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import shutil
 from pathlib import Path
 
@@ -22,10 +23,34 @@ def _hydrate_release_manifests(source_dir: Path, release: ResolvedRelease) -> No
             shutil.copy2(source, manifests_dir / filename)
 
 
+def _strip_uv_sources(source_dir: Path) -> None:
+    """Remove [tool.uv.sources] from pyproject.toml.
+
+    Package authors use this section for local development overrides (e.g.
+    ``gaia-lang = { path = "../Gaia" }``).  In CI the framework is installed
+    from PyPI/Git and Gaia deps are managed by this script, so the section
+    must be stripped to avoid ``uv pip install`` resolving non-existent paths.
+    """
+    pyproject = source_dir / "pyproject.toml"
+    if not pyproject.exists():
+        return
+    text = pyproject.read_text()
+    # Remove the entire [tool.uv.sources] table: header + all key = value
+    # lines until the next section header or end of file.
+    stripped = re.sub(
+        r"\n?\[tool\.uv\.sources\]\n(?:[^\[]*(?:\n|$))*",
+        "\n",
+        text,
+    )
+    if stripped != text:
+        pyproject.write_text(stripped)
+
+
 def _clone_release(source_dir: Path, release: ResolvedRelease) -> None:
     ensure_clean_dir(source_dir)
     run(["git", "clone", release.repo_url, str(source_dir)], cwd=source_dir.parent)
     run(["git", "checkout", release.git_ref], cwd=source_dir)
+    _strip_uv_sources(source_dir)
 
 
 def install_dependencies(*, registry_root: Path, source_dir: Path, deps_dir: Path) -> None:
