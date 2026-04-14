@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "content": "The DFT predictions for high-Tc superconductivity in clathrate superhydrides are experimentally validated: LaH₁₀ achieves Tc = 250 K in the predicted Fm-3m structure, confirming that crystal structure prediction methods can reliably identify high-temperature superconductors. The predicted Tc ~ 280 K at 200 GPa is reasonably close to the observed 250 K at 170 GPa.",
+      "content_hash": "ed33ffda50b0e4b4759a12ced7d6f15bd2369dde9f3d1da5e63e555b49305cc1",
+      "label": "dft_clathrate_prediction_validated",
+      "qid": "github:lah10_superconductivity::dft_clathrate_prediction_validated",
+      "type": "claim"
+    },
+    {
+      "content": "The Fm-3m face-centered cubic clathrate structure of LaH₁₀ is confirmed by XRD at 150 GPa. The lattice constant a = 5.1019 Å and estimated stoichiometry LaH₉.₆ are in excellent agreement with DFT predictions for the sodalite-like H₃₂ cage structure. This is the first structural confirmation of a predicted clathrate superhydride.",
+      "content_hash": "ee48d640bf34dbdccedbbae0163e1f6702e2564fe9869a277ab0ac8a8fbf58a9",
+      "label": "lah10_structure_confirmed",
+      "qid": "github:lah10_superconductivity::lah10_structure_confirmed",
+      "type": "claim"
+    },
+    {
+      "content": "Room-temperature superconductivity (273 K) appears achievable in hydrogen-rich materials at high pressure. The leap of ~50 K above the H₃S record (203 K → 250 K) demonstrates rapid progress. Theoretical predictions for YH₁₀ (Tc = 303-326 K at 250 GPa) motivate further experiments. Carbon-based materials with high hydrogen content offer a potential path toward ambient-pressure superconductivity.",
+      "content_hash": "b770d717e7a1664448231312b7bf3ccb6c5de8c6b78bc742f1db765c5125adfd",
+      "label": "rtsc_prospect",
+      "qid": "github:lah10_superconductivity::rtsc_prospect",
+      "type": "claim"
+    },
+    {
+      "content": "Genuine superconductivity at 250 K in LaH₁₀ is confirmed by three independent lines of evidence: (1) sharp resistance drop to zero in multiple samples, (2) systematic suppression of Tc under magnetic fields up to 9 T with extrapolated Hc2(0) = 95-136 T, and (3) a strong isotope effect with α ≈ 0.57 close to the BCS value of 0.5, confirming phonon-mediated pairing.",
+      "content_hash": "83afbe4a2467ec394aa6accc3be4d52daf13b5345b13e9982c55707d539b66b1",
+      "label": "superconductivity_confirmed",
+      "qid": "github:lah10_superconductivity::superconductivity_confirmed",
+      "type": "claim"
+    }
+  ],
+  "ir_hash": "sha256:bb0724bb836b9d814a4cb8ec71150a2fbf51c0e8cdd7417394f8c69510afc011",
+  "manifest_schema_version": 1,
+  "package": "lah10-superconductivity",
+  "version": "0.1.0"
+}
