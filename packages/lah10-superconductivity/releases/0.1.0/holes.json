@@ -1,0 +1,48 @@
+{
+  "holes": [
+    {
+      "content": "Deuterium substitution reveals a strong isotope effect: the Fm-3m phase (LaH₁₀) has Tc = 250 K (H) → 168 K (D), giving isotope exponent α ≈ 0.57. The competing P4/nmm phase (LaH₁₁) shows Tc = 215 K (H) → 140 K (D), giving α ≈ 0.62. Both values are close to the BCS harmonic limit α = 0.5, with the slight excess attributable to soft anharmonicity of H/D vibrations (ωH/ωD < √2).",
+      "content_hash": "99acf5dbde3af0f9fe3009e6aefd00a3461fc7933b550b04edabe037577909dd",
+      "interface_hash": "sha256:495cecbd76d65045555c775ce125b10a1cf73cf9cf77b66624736f3d1d82f20e",
+      "label": "isotope_effect",
+      "qid": "github:lah10_superconductivity::isotope_effect",
+      "required_by": [
+        "github:lah10_superconductivity::superconductivity_confirmed"
+      ]
+    },
+    {
+      "content": "La (99.9%, Alfa Aesar) was loaded with H₂ (99.999%) in a DAC. La readily reacts with H₂ to form LaH₃ at ~10 GPa without heating. After pressurizing to 120-190 GPa, pulsed YAG laser heating (spot ~10 μm, T < 700-1500 K) was used to initiate the formation of higher hydrides. The laser spot was scanned over the sample for uniform reaction.",
+      "content_hash": "4a753cba0f64eed35b650b3a9e5dffc94b1f0d444b617803eb6fff3826519bef",
+      "interface_hash": "sha256:bbec5c6328ec1a624230649e6d26b46fa55a5bd5e4441b9ec57ed740ddd09fed",
+      "label": "synthesis_method",
+      "qid": "github:lah10_superconductivity::synthesis_method",
+      "required_by": [
+        "github:lah10_superconductivity::superconductivity_confirmed"
+      ]
+    },
+    {
+      "content": "At zero field, the R(T) transition shows two steps near 245 K and 230 K. The higher-temperature step gradually broadens with increasing magnetic field and completely disappears above 3 T. This behavior is consistent with inhomogeneous superconductivity — multiple superconducting regions with slightly different Tc values, as seen in disordered boron-doped diamond.",
+      "content_hash": "f1157465af400043a27e9f84ee4b6e54a600aa43a2dbcdf04202bb2507bb17c7",
+      "interface_hash": "sha256:a368ab95423e37fdcb92d3d998e9171878b95b211fdb22b9c0c9bb837d38c323",
+      "label": "two_step_transition",
+      "qid": "github:lah10_superconductivity::two_step_transition",
+      "required_by": [
+        "github:lah10_superconductivity::superconductivity_confirmed"
+      ]
+    },
+    {
+      "content": "X-ray diffraction at 150 GPa identifies the Tc = 250 K phase as face-centered cubic Fm-3m with refined lattice constant a = 5.1019(5) Å (V = 132.80 Å³). The volume matches DFT predictions for LaH₁₀ (131.9 Å³ at 172 GPa). Stoichiometry LaH₉.₆ estimated from the hydrogen volume (VH = 1.9 Å³/atom from LaH₃ calibration) — in good agreement with LaH₁₀.",
+      "content_hash": "697027538e87eb6d4dbbc5cbb10175a37ba7516dc2882e34059a0c5c728244a2",
+      "interface_hash": "sha256:ddc22bee4084274351ae6c9d7dbefd5634dd0b0dc04dee9d03d30c1d50931230",
+      "label": "xrd_fm3m_structure",
+      "qid": "github:lah10_superconductivity::xrd_fm3m_structure",
+      "required_by": [
+        "github:lah10_superconductivity::lah10_structure_confirmed"
+      ]
+    }
+  ],
+  "ir_hash": "sha256:bb0724bb836b9d814a4cb8ec71150a2fbf51c0e8cdd7417394f8c69510afc011",
+  "manifest_schema_version": 1,
+  "package": "lah10-superconductivity",
+  "version": "0.1.0"
+}
