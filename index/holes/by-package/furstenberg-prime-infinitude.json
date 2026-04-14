@@ -1,0 +1,61 @@
+{
+  "package": "furstenberg-prime-infinitude",
+  "versions": {
+    "0.1.0": {
+      "holes": [
+        {
+          "content": "In any topological space $(Y, \\mathcal{T})$, for any collection of subsets $\\{A_\\alpha\\}$, the union of closures is contained in the closure of the union: $\\bigcup_{\\alpha} \\operatorname{cl}_Y(A_\\alpha) \\subseteq \\operatorname{cl}_Y\\!\\left(\\bigcup_{\\alpha} A_\\alpha\\right)$.",
+          "content_hash": "8910fc563405e3e73e0d72b97c5194d53c90882da385c4686ca4f1bf1859d9ea",
+          "interface_hash": "sha256:ee32049cad4f12f6ad46ad3d1ee0cf42ad7a7698b48a2e08ff21b1c2ad98aca1",
+          "label": "closure_union_containment",
+          "qid": "github:furstenberg_prime_infinitude::closure_union_containment",
+          "required_by": [
+            "github:furstenberg_prime_infinitude::thm_p_dense_x1"
+          ]
+        },
+        {
+          "content": "In topological spaces, density is transitive: if $A$ is dense in subspace $B$ and $B$ is dense in ambient space $C$, then $A$ is dense in $C$.",
+          "content_hash": "e5aaa4837b0b6a551588c2ca74ecbce89703d7ef4638147321b30ee92e3a708d",
+          "interface_hash": "sha256:b19fbfd9155df3cc949022f6c687f004f72c4088bf8fdf0aa485d71f8521ca82",
+          "label": "density_transitivity",
+          "qid": "github:furstenberg_prime_infinitude::density_transitivity",
+          "required_by": [
+            "github:furstenberg_prime_infinitude::thm_infinitude_primes"
+          ]
+        },
+        {
+          "content": "Every integer $n > 1$ can be expressed as a product of prime numbers (Fundamental Theorem of Arithmetic). Equivalently, every integer greater than 1 is divisible by at least one prime, so $\\bigcup_{p \\in P} M_p = \\mathbb{N} \\setminus \\{1\\}$.",
+          "content_hash": "b6f07aa7aab3e7cf6b4170dbc4c32692abd12b42f59923e4d9ea9e5eee61779a",
+          "interface_hash": "sha256:665b044a17d04301ad6ff2810ae69eb843aff46bcd5ac6e794c15ccabedd24cd",
+          "label": "fundamental_theorem_arithmetic",
+          "qid": "github:furstenberg_prime_infinitude::fundamental_theorem_arithmetic",
+          "required_by": [
+            "github:furstenberg_prime_infinitude::thm_p_dense_x1"
+          ]
+        },
+        {
+          "content": "For all positive integers $x, n, m$: $\\gcd(x, n) = 1$ and $\\gcd(x, m) = 1$ if and only if $\\gcd(x, nm) = 1$. As a consequence, $\\sigma_{nm} = \\sigma_n \\cap \\sigma_m$ for all $n, m \\in \\mathbb{N}$.",
+          "content_hash": "6b3f9757ab5f2b1ee6626dcfcca1462b68dd7761a7806ac13955d1ae1b563f67",
+          "interface_hash": "sha256:af07b6f5a052691b17cc2b1bb39738ead3077fbc7889430ed7c17186557fc394",
+          "label": "gcd_multiplicativity",
+          "qid": "github:furstenberg_prime_infinitude::gcd_multiplicativity",
+          "required_by": [
+            "github:furstenberg_prime_infinitude::thm_density_iff_infinite",
+            "github:furstenberg_prime_infinitude::thm_p_dense_x1",
+            "github:furstenberg_prime_infinitude::thm_subset_dense_iff_infinite"
+          ]
+        },
+        {
+          "content": "For every positive integer $n$, the set $\\sigma_n = \\{m \\in \\mathbb{N} : \\gcd(n, m) = 1\\}$ is infinite. For $n > 1$, $\\sigma_n$ consists of all positive integers in the residue classes $m \\pmod{n}$ with $\\gcd(m, n) = 1$; each such arithmetic progression $\\{m, m+n, m+2n, \\ldots\\}$ is infinite.",
+          "content_hash": "da36d543522479e60559285016c71b6958b0f0e6a40e614a2b96b85e30e9a741",
+          "interface_hash": "sha256:5a37e8f53cd16366ba4c79975bae5d5fefccf5e54447c440f060012b455bc7ba",
+          "label": "sigma_n_infinite",
+          "qid": "github:furstenberg_prime_infinitude::sigma_n_infinite",
+          "required_by": [
+            "github:furstenberg_prime_infinitude::thm_infinitude_primes"
+          ]
+        }
+      ]
+    }
+  }
+}

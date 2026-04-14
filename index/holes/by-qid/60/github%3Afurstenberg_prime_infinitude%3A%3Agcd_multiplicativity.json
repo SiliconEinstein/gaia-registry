@@ -1,0 +1,15 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:af07b6f5a052691b17cc2b1bb39738ead3077fbc7889430ed7c17186557fc394",
+      "package": "furstenberg-prime-infinitude",
+      "required_by": [
+        "github:furstenberg_prime_infinitude::thm_density_iff_infinite",
+        "github:furstenberg_prime_infinitude::thm_p_dense_x1",
+        "github:furstenberg_prime_infinitude::thm_subset_dense_iff_infinite"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:furstenberg_prime_infinitude::gcd_multiplicativity"
+}

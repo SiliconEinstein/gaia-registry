@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:b19fbfd9155df3cc949022f6c687f004f72c4088bf8fdf0aa485d71f8521ca82",
+      "package": "furstenberg-prime-infinitude",
+      "required_by": [
+        "github:furstenberg_prime_infinitude::thm_infinitude_primes"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:furstenberg_prime_infinitude::density_transitivity"
+}

@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:665b044a17d04301ad6ff2810ae69eb843aff46bcd5ac6e794c15ccabedd24cd",
+      "package": "furstenberg-prime-infinitude",
+      "required_by": [
+        "github:furstenberg_prime_infinitude::thm_p_dense_x1"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:furstenberg_prime_infinitude::fundamental_theorem_arithmetic"
+}

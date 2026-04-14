@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:ee32049cad4f12f6ad46ad3d1ee0cf42ad7a7698b48a2e08ff21b1c2ad98aca1",
+      "package": "furstenberg-prime-infinitude",
+      "required_by": [
+        "github:furstenberg_prime_infinitude::thm_p_dense_x1"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:furstenberg_prime_infinitude::closure_union_containment"
+}

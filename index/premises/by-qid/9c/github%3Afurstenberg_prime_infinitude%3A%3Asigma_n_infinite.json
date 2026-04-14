@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "da36d543522479e60559285016c71b6958b0f0e6a40e614a2b96b85e30e9a741",
+      "exported": false,
+      "interface_hash": "sha256:5a37e8f53cd16366ba4c79975bae5d5fefccf5e54447c440f060012b455bc7ba",
+      "package": "furstenberg-prime-infinitude",
+      "required_by": [
+        "github:furstenberg_prime_infinitude::thm_infinitude_primes"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:furstenberg_prime_infinitude::sigma_n_infinite"
+}

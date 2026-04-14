@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:5a37e8f53cd16366ba4c79975bae5d5fefccf5e54447c440f060012b455bc7ba",
+      "package": "furstenberg-prime-infinitude",
+      "required_by": [
+        "github:furstenberg_prime_infinitude::thm_infinitude_primes"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:furstenberg_prime_infinitude::sigma_n_infinite"
+}
