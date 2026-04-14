@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "content_hash": "a8b09ce83303203210521d8f1552b0ea198cec1b866166da0dcc829ea625ae58",
+      "exported": false,
+      "interface_hash": "sha256:b38fe42f605b7cc902e855adabbddb040a46ece4acae5c1fef28127fd2747ed2",
+      "package": "lah10-superconductivity",
+      "required_by": [
+        "github:lah10_superconductivity::lah10_structure_confirmed",
+        "github:lah10_superconductivity::rtsc_prospect"
+      ],
+      "role": "foreign_dependency",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:h3s_superconductivity::conventional_sc_above_200k"
+}

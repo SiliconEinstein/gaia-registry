@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:a368ab95423e37fdcb92d3d998e9171878b95b211fdb22b9c0c9bb837d38c323",
+      "package": "lah10-superconductivity",
+      "required_by": [
+        "github:lah10_superconductivity::superconductivity_confirmed"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:lah10_superconductivity::two_step_transition"
+}

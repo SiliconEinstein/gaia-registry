@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "522e97e452d2095ec5ac7230208b1b56a852a494ad2b20d663ac7ab955953019",
+      "exported": false,
+      "interface_hash": "sha256:5b73e55380a84282a4552948f8ebecebf9a11a424730a16dd76fcc5cd2b9233b",
+      "package": "csh-superconductivity",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:csh_superconductivity::isotope_effect_observed"
+}

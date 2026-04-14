@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:ddc22bee4084274351ae6c9d7dbefd5634dd0b0dc04dee9d03d30c1d50931230",
+      "package": "lah10-superconductivity",
+      "required_by": [
+        "github:lah10_superconductivity::lah10_structure_confirmed"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:lah10_superconductivity::xrd_fm3m_structure"
+}

@@ -1,0 +1,13 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:495cecbd76d65045555c775ce125b10a1cf73cf9cf77b66624736f3d1d82f20e",
+      "package": "lah10-superconductivity",
+      "required_by": [
+        "github:lah10_superconductivity::superconductivity_confirmed"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:lah10_superconductivity::isotope_effect"
+}

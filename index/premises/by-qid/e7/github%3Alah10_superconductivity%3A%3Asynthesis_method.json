@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "4a753cba0f64eed35b650b3a9e5dffc94b1f0d444b617803eb6fff3826519bef",
+      "exported": false,
+      "interface_hash": "sha256:bbec5c6328ec1a624230649e6d26b46fa55a5bd5e4441b9ec57ed740ddd09fed",
+      "package": "lah10-superconductivity",
+      "required_by": [
+        "github:lah10_superconductivity::superconductivity_confirmed"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:lah10_superconductivity::synthesis_method"
+}

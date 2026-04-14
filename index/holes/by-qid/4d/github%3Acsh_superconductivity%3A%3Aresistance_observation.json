@@ -1,0 +1,14 @@
+{
+  "hole_versions": [
+    {
+      "interface_hash": "sha256:d0bfd0736c17dfe0278ba76086f6625ae81c7fd9449638b647652c8e9869fc54",
+      "package": "csh-superconductivity",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence",
+        "github:csh_superconductivity::room_temperature_sc"
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:csh_superconductivity::resistance_observation"
+}

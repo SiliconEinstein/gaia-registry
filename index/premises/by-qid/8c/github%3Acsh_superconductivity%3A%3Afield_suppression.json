@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "10b52475bdaa3921dd3a67854d52c0858186dd01d32dc479f3fbc6cff47d8395",
+      "exported": false,
+      "interface_hash": "sha256:f094b8b831e845b386d83376582c323e0b9e3f756b2ecc13428affe653a2df20",
+      "package": "csh-superconductivity",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:csh_superconductivity::field_suppression"
+}

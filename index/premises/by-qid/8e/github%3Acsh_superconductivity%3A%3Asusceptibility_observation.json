@@ -1,0 +1,16 @@
+{
+  "history": [
+    {
+      "content_hash": "09594f65a94f8e70c3dc0e3885760cda18b4bd21bb2df59284876afef30517f9",
+      "exported": true,
+      "interface_hash": "sha256:cfbcff76c22468c7b84077bc750a4633551d785e028c55c398f29a68a7316a04",
+      "package": "csh-superconductivity",
+      "required_by": [
+        "github:csh_superconductivity::original_sc_evidence"
+      ],
+      "role": "local_hole",
+      "version": "0.1.0"
+    }
+  ],
+  "qid": "github:csh_superconductivity::susceptibility_observation"
+}
